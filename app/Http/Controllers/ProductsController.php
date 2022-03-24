@@ -121,6 +121,10 @@ class ProductsController extends Controller
 
         $validator = Validator::make($request->all(), [
 
+            'productName' => 'required',
+            'price' => 'required',
+            'quantity' => 'required',
+            'subtotal' => 'required',
             'name' => 'required',
             'contact' => 'required',
             'payment' => 'required',
@@ -131,8 +135,12 @@ class ProductsController extends Controller
             'requirement' => 'required',
         ],
         [
+            'productName.required' => 'Product is empty in cart',
+            'price.required' => 'Price is required in cart',
+            'quantity.required' => 'Quantity is required',
+            'subtotal.required' => 'Subtotal is required',
             'name.required' => 'Name is required',
-            'contact.required' => 'Contact is required',
+            'contact.required' => 'Contact Number is required',
             'payment.required' => 'Payment is required',
             'email.required' => 'Email is required',
             'city.required' => 'City is required',

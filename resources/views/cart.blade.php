@@ -72,6 +72,26 @@
 
             </div><!--end of col-sm-4-->
             <div class="col-sm-7">
+                @error('productName')
+                 <div class="alert alert-danger" role="alert">
+                    {{ $message }}
+                  </div>
+                @enderror
+                @error('price')
+                <div class="alert alert-danger" role="alert">
+                   {{ $message }}
+                 </div>
+               @enderror
+               @error('quantity')
+               <div class="alert alert-danger" role="alert">
+                  {{ $message }}
+                </div>
+              @enderror
+              @error('subtotal')
+              <div class="alert alert-danger" role="alert">
+                 {{ $message }}
+               </div>
+             @enderror
                 <table id="cart" class="table table-hover table-condensed ">
                     <thead>
                         <tr style="background-color: gray;">
