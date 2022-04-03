@@ -277,11 +277,11 @@ ul.social-icons li {
 /*-- sidebar --*/
 #sidebar {
   background: #222;
-    width: 200px;
-    height: 600px;
+    width: 315px;
+    height: auto;
     display: block;
     position: absolute;
-    left: -200px;
+    left: -316px;
     top: 0;
     transition: left 0.3s linear;
     z-index: 999;
@@ -358,7 +358,7 @@ h4.menu {
     margin: 0px;
     border: 0px;
     position: absolute;
-    width: 200px;
+    width: 316px;
     z-index: 200;
 }
 #sidebar li:hover ul {
@@ -1201,7 +1201,7 @@ border:none!important;
 }
 /*-- //tabs --*/
 .banner-bottom {
-    background: url(../images/bottom.jpg) no-repeat 0px 0px;
+    background: url(../images/hero.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;

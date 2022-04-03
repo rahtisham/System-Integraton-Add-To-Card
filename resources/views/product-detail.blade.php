@@ -312,73 +312,21 @@
 
 			</div>
 			<div class="col-md-4 single-right">
-			{{-- <div class="blo-top">
-						<div class="tech-btm">
-						<h4>Sign up to our newsletter</h4>
-						<p>Pellentesque dui, non felis. Maecenas male</p>
-							<div class="name">
-								 <form action="#" method="post">
-									<input type="text" name="email" class="email" placeholder="Enter your email address" required="">
-									<input type="submit" value="Subscribe">
-								</form>
-								<div class="clearfix"> </div>
-						</div>
-					</div>
-					</div> --}}
-				<div class="blo-top1">
-					<div class="agileits_twitter_posts tech-btm">
-					<h4>Twitter Posts</h4>
-					<ul>
-						<li><i class="fa fa-twitter" aria-hidden="true"></i> 01 day ago<span>Non numquam <a href="#">http://sd.ds/13jklf#</a>
-							eius modi tempora incidunt ut labore et
-							<a href="#">http://sd.ds/1389kjklf#</a>quo nulla.</span></li>
-						<li><i class="fa fa-twitter" aria-hidden="true"></i> 02 day ago<span>Con numquam <a href="#">http://fd.uf/56hfg#</a>
-							eius modi tempora incidunt ut labore et
-							<a href="#">http://fd.uf/56hfg#</a>quo nulla.</span></li>
-						<li><i class="fa fa-twitter" aria-hidden="true"></i> 03 day ago<span>Qon numquam <a href="#">http://gf.ds/gre21#</a>
-							eius modi tempora incidunt ut labore et
-							<a href="#">http://gf.ds/gre21#</a>quo nulla.</span></li>
-					</ul>
-					</div>
-				</div>
 				<div class="related-posts">
 					<h3>Related Posts</h3>
-					<div class="related-post">
+                    @foreach ($latestPost as $post)
+                    <div class="related-post">
 						<div class="related-post-left">
-							<a href="#"><img src="{{ asset('Pain-Clock/pc-2i_rg.jpg') }}" alt=" " class="img-responsive"></a>
+							<a href="{{ url('products/detail', [ $post['sub_name'] , $post['sub_id']]) }}"><img src="{{ asset($post['images']) }}" alt=" " class="img-responsive"></a>
 						</div>
 						<div class="related-post-right">
-							<h4><a href="single.html">Donec sollicitudin</a></h4>
-							<p>Aliquam dapibus tincidunt metus.
-								<span>Praesent justo dolor, lobortis.</span>
-							</p>
-						</div>
-						<div class="clearfix"> </div>
+							<h4 class="p-1"><a href="single.html">{{ $post['sub_name'] }}</a></h4>
+							<h4 class="p-1">Rupee = {{ $post['price'] }}</h4><br>
+                            <a href="{{ url('products/detail', [ $post['sub_name'] , $post['sub_id']]) }}" class="btn btn-info btn-sm">View Product</a>
+                            </div>
+                        <div class="clearfix"> </div>
 					</div>
-					<div class="related-post">
-						<div class="related-post-left">
-							<a href="#"><img src="{{ asset('Pain-clock/pc-5i.jpg') }}" alt=" " class="img-responsive"></a>
-						</div>
-						<div class="related-post-right">
-							<h4><a href="single.html">Donec sollicitudin</a></h4>
-							<p>Aliquam dapibus tincidunt metus.
-								<span>Praesent justo dolor, lobortis.</span>
-							</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="related-post">
-						<div class="related-post-left">
-							<a href="#"><img src="{{ asset('Pain-Clock/pc-18d_rg.jpg') }}" alt=" " class="img-responsive"></a>
-						</div>
-						<div class="related-post-right">
-							<h4><a href="single.html">Donec sollicitudin</a></h4>
-							<p>Aliquam dapibus tincidunt metus.
-								<span>Praesent justo dolor, lobortis.</span>
-							</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
+                    @endforeach
 				</div>
 			</div>
 			<div class="clearfix"> </div>

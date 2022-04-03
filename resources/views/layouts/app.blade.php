@@ -80,14 +80,55 @@
                                   <li><a href="{{ url('products/Salaat Panel/1') }}">Salaat Panel<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                     <ul id="cateogries">
                                         <li data-id="1"><a href="{{ url('products/detail/SPT-Home/1') }}"><span>SPT-Home</span></a></li>
+                                        <li><a href="#"><span>SPT-Home</span></a></li>
                                         <li><a href="#"><span>SPT-Mini</span></a></li>
-                                        <li><a href="#"><span>SPT-30 Series</span></a></li>
-                                        <li><a href="#"><span>SPT-35 Series</span></a></li>
-                                        <li><a href="#"><span>SPT-50 Series</span></a></li>
+                                        <li><a href="#"><span>SPT-Mini Plus</span></a></li>
+                                        <li><a href="#"><span>SPT-30</span></a></li>
+                                        <li><a href="#"><span>SPT-35</span></a></li>
+                                        <li><a href="#"><span>SPT-50</span></a></li>
                                         <li><a href="#"><span>SPT-60F</span></a></li>
                                         <li><a href="#"><span>SP-4EL</span></a></li>
                                        <li class="last"><a href="#"><span>QP-15F</span></a></li>
                                      </ul>
+                                 </li>
+
+                                 <li><a href="{{ url('products/Panel Horizontal/7') }}">Salaat Panel Horizontal <i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                    <ul>
+                                      <li><a href="#">SPH-24 LED</a></li>
+                                      <li><a href="#">SPH-30 LED</a></li>
+                                      <li><a href="#">SPNH-30 LED</a></li>
+                                      <li><a href="#">SPH-24 MX</a></li>
+                                      <li><a href="#">SPH-$0 MX</a></li>
+
+                                   </ul>
+                                 </li>
+
+
+
+                                 <li><a href="{{ url('products/Salaat Panel Vertical/6') }}">Salaat Panel Vertical<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                    <ul>
+                                      <li><a href="#">SP-50 LED</a></li>
+                                      <li><a href="#">SP-80 LED</a></li>
+
+                                   </ul>
+                                 </li>
+
+                                 <li><a href="{{ url('products/Salaat Panel With Quran & Azan/9') }}">Salaat Panel With Quran & Azan <i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                    <ul>
+                                      <li><a href="#">SPT-Home</a></li>
+                                      <li><a href="#">SPQ-Mini Plus</a></li>
+                                      <li><a href="#">SPQ-30</a></li>
+                                      <li><a href="#">SPQ-35</a></li>
+
+                                   </ul>
+                                 </li>
+
+                                 <li><a href="{{ url('products/Jamaat Next Change Panel/10') }}">Jamaat Next Change Panel<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                    <ul>
+                                      <li><a href="#">SCH-15</a></li>
+                                      <li><a href="#">SPNH-30 LED</a></li>
+
+                                   </ul>
                                  </li>
 
                                  <li><a href="{{ url('products/Salaat Clock/2') }}">Salaat Clock<i class="glyphicon glyphicon-triangle-bottom"> </i></a>
@@ -103,60 +144,64 @@
                                     <li><a href="#">SC-8i</a></li>
                                     </ul>
                                  </li>
+
+                                 <li><a href="{{ url('products/Salaat Clock With Quran & Azan/11') }}">Salaat Clock With Quran & Azan<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                    <ul>
+                                      <li><a href="#">SC-106AT</a></li>
+                                      <li><a href="#">SC-206AT</a></li>
+                                   </ul>
+                                 </li>
+
+
                                   <li><a href="{{ url('products/Plain Clock/3') }}">Plain Clock<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                     <ul>
-                                      <li><a href="#">PC-8i LED</a></li>
-                                      <li><a href="#">PC-10i S LED</a></li>
-                                      <li><a href="#">PC-15i LED</a></li>
+                                      <li><a href="#">PC-180</a></li>
+                                      <li><a href="#">PC-2i</a></li>
+                                      <li><a href="#">SW-2i</a></li>
+                                      <li><a href="#">PC-3i</a></li>
+                                      <li><a href="#">PC-4i</a></li>
+                                      <li><a href="#">PC-5i</a></li>
 
                                    </ul>
                                  </li>
 
-                                 <li><a href="{{ url('products/Plain Clock MX/4') }}">Plain Clock MX<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                 <li><a href="{{ url('products/Plain Clock Outdoor/12') }}">Plain Clock Outdoor<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                    <ul>
+                                      <li><a href="#">PC-MX2</a></li>
+                                      <li><a href="#">PC-MX4</a></li>
+                                      <li><a href="#">PC-MX12</a></li>
+                                      <li><a href="#">PC-MX12TH</a></li>
+
+                                   </ul>
+                                 </li>
+
+                                 <li><a href="{{ url('products/Plain Clock MX Outdoor/4') }}">Plain Clock MX<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                   <ul>
+                                    <li><a href="#">PC-MX2</a></li>
+                                    <li><a href="#">PC-MX4</a></li>
                                     <li><a href="#">PC-MX12</a></li>
                                     <li><a href="#">PC-MX12TH</a></li>
-                                    <li><a href="#">PC-MX18x35</a></li>
-                                    <li><a href="#">PC-2i</a></li>
-                                    <li><a href="#">Urdu Clock</a></li>
                                  </ul>
                                </li>
 
 
-                               <li><a href="{{ url('products/Classic Intecom/5') }}">Classic Intecom<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                               <li><a href="{{ url('products/Hijri Calendar/5') }}">Hijri Calendar<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                   <ul>
-                                    <li><a href="#">IC-16</a></li>
-                                    <li><a href="#">IC-64E</a></li>
+                                    <li><a href="#">HC-5P</a></li>
+                                    <li><a href="#">HC-4TM</a></li>
 
                                  </ul>
                                </li>
 
-                               <li><a href="{{ url('products/Salat Panel LED/6') }}">Salat Panel LED<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
-                                  <ul>
-                                    <li><a href="#">SP-50 LED</a></li>
-                                    <li><a href="#">SP-60 LED</a></li>
 
-                                 </ul>
-                               </li>
-
-                               <li><a href="{{ url('products/Panel Horizontal/7') }}">Panel Horizontal <i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
-                                  <ul>
-                                    <li><a href="#">SP-24H LED</a></li>
-                                    <li><a href="#">SP-30H LED</a></li>
-                                    <li><a href="#">SP-40H MX</a></li>
-
-                                 </ul>
-                               </li>
-
-                               <li><a href="{{ url('products/Jamat Next/8') }}">Jamat Next<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
-                                  <ul>
-                                    <li><a href="#">SCH-15</a></li>
-                                    <li><a href="#">SPN-30H LED</a></li>
-
-
-                                 </ul>
-                               </li>
-
+                               <li><a href="{{ url('products/Apartment Intercom/8') }}">Apartment Intercom<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
+                               <li><a href="{{ url('products/PABX/13') }}">PABX<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
+                               <li><a href="{{ url('products/School Timer/14') }}">School Timer<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
+                               <li><a href="{{ url('products/Gold Rate/15') }}">Gold Rate<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
+                               <li><a href="{{ url('products/Home Water Management/16') }}">Home Water Management<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
+                               <li><a href="{{ url('products/Home & Office Time Products/17') }}">Home & Office Time Products<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
+                               <li><a href="{{ url('products/Outdoor Time Products/18') }}">Outdoor Time Products<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
+                               <li><a href="{{ url('contact-us') }}">Contact Us<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
 
                               </ul>
                              <div id="sidebar-btn">

@@ -143,179 +143,30 @@
 		<div class="container">
 		      <h3 class="tittle">Products</h3>
 	               <div class="inner_tabs">
-		<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-						<ul id="myTab" class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">UpComing</a></li>
-							<li role="presentation"><a href="#tours" role="tab" id="tours-tab" data-toggle="tab" aria-controls="tours">Popular</a></li>
-							<li role="presentation"><a href="#tree" role="tab" id="tree-tab" data-toggle="tab" aria-controls="tree">Just Launched</a></li>
-
-						</ul>
+		                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 						<div id="myTabContent" class="tab-content">
 							<div role="tabpanel" class="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">
 							   <div class="section__content clearfix">
-							   <!-- /card1 -->
-								  <div class="card effect__hover">
-									<div class="card__front">
-									  <span class="card__text">
-									       <div class="img-grid">
-                                            <img src="{{ asset('salaat/spt-30.jpg') }}" alt="Catchy Carz">
-                                                <div class="car_description">
-                                                    <h4><a href="single.html">Mercedes-Benz C250 CDI</a></h4>
-                                                    <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 8000 - $ 12000</span></div>
-{{--														 <p>Estimated Price</p>--}}
-{{--														 <div class="date">Mar 2017</div>--}}
-{{--														 <p>Expected Launch</p>--}}
+                                    <!-- /card1 -->
+                                        @foreach ($subCategories as $subCategory)
+                                                <div class="card">
+                                                    <div class="card__front">
+                                                        <a href="{{ url('products/detail', [ $subCategory['sub_name'] , $subCategory['sub_id']]) }}">
+                                                            <span class="card__text">
+                                                                <div class="img-grid">
+                                                                    <img src="{{ asset($subCategory['images']) }}" alt="Catchy Carz">
+                                                                    <div class="car_description">
+                                                                        <h4><a href="{{ url('products/detail', [ $subCategory['sub_name'] , $subCategory['sub_id']]) }}">{{ $subCategory['sub_name'] }}</a></h4>
+                                                                        <div class="price"><span class="fa fa-rupee"></span><span class="font25">Rupee = {{ $subCategory['price'] }}</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </span>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-									  </span>
-									</div>
-									<div class="card__back">
-									  <span class="card__text">
-									     	 <div class="login-inner2">
-												<h4>Be the first to know</h4>
-											<div class="login-top sign-top">
-												<form>
-													<input type="text" name="name" class="name active" placeholder="Name" required=""/>
-													<input type="text" name="email" class="email" placeholder="Email" required=""/>
-													<input type="text" name="phone" class="phone" placeholder="Phone" required=""/>
-													<div class="section_drop">
-													<select id="country1" onchange="change_country(this.value)" class="frm-field required">
-															<option value="null"> Select City</option>
-														<option value="city">Amsterdam</option>
-														<option value="city">Bahrain</option>
-														<option value="city">Cannes</option>
-														<option value="city">Dublin</option>
-														<option value="city">Edinburgh</option>
-														<option value="city">Florence</option>
-														<option value="city">Georgia</option>
-														<option value="city">Hungary</option>
-														<option value="city">Hong Kong</option>
-														<option value="city">Johannesburg</option>
-														<option value="city">Kiev</option>
-														<option value="city">London</option>
-														<option value="city">Others...</option>
-													</select>
-												   </div>
-													<input type="submit" value="Done">
-
-													</div>
-												</form>
-
-													</div>
-									  </span>
-									</div>
-								  </div>
-								    <!-- //card1 -->
-									<!-- /card2 -->
-								  <div class="card effect__hover">
-									<div class="card__front">
-									  <span class="card__text">
-									       <div class="img-grid">
-													<img src="{{ asset('salaat/spt-home.jpg') }}" alt="Catchy Carz">
-													<div class="car_description">
-														 <h4><a href="single.html">Audi A4 2.0 TDI</a></h4>
-														 <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 6000 - $ 10000</span></div>
-{{--														 <p>Estimated Price</p>--}}
-{{--														 <div class="date">Mar 2017</div>--}}
-{{--														 <p>Expected Launch</p>--}}
-														</div>
-
-													</div>
-									  </span>
-									</div>
-									<div class="card__back">
-									  <span class="card__text">
-									     	 <div class="login-inner2">
-												<h4>Be the first to know</h4>
-											<div class="login-top sign-top">
-												<form action="#" method="post">
-													<input type="text" name="name" class="name active" placeholder="Name" required=""/>
-													<input type="text" name="email" class="email" placeholder="Email" required=""/>
-													<input type="text" name="phone" class="phone" placeholder="Phone" required=""/>
-													<div class="section_drop">
-													<select id="country1" onchange="change_country(this.value)" class="frm-field required">
-															<option value="null"> Select City</option>
-														<option value="city">Amsterdam</option>
-														<option value="city">Bahrain</option>
-														<option value="city">Cannes</option>
-														<option value="city">Dublin</option>
-														<option value="city">Edinburgh</option>
-														<option value="city">Florence</option>
-														<option value="city">Georgia</option>
-														<option value="city">Hungary</option>
-														<option value="city">Hong Kong</option>
-														<option value="city">Johannesburg</option>
-														<option value="city">Kiev</option>
-														<option value="city">London</option>
-														<option value="city">Others...</option>
-													</select>
-												   </div>
-													<input type="submit" value="Done">
-
-													</div>
-												</form>
-
-													</div>
-									  </span>
-									</div>
-								  </div>
-								    <!-- //card2 -->
-									<!-- /card3 -->
-								  <div class="card effect__hover">
-									<div class="card__front">
-									  <span class="card__text">
-									       <div class="img-grid">
-													<img src="{{ asset('salaat/spt-mini_urdu.jpg') }}" alt="Catchy Carz">
-													<div class="car_description">
-														 <h4><a href="single.html">Foed Mustang GT 500</a></h4>
-														 <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 9000 - $ 12000</span></div>
-{{--														 <p>Estimated Price</p>--}}
-{{--														 <div class="date">Mar 2017</div>--}}
-{{--														 <p>Expected Launch</p>--}}
-														</div>
-
-													</div>
-									  </span>
-									</div>
-									<div class="card__back">
-									  <span class="card__text">
-									     	 <div class="login-inner2">
-												<h4>Be the first to know</h4>
-											<div class="login-top sign-top">
-												 <form action="#" method="post">
-													<input type="text" name="name" class="name active" placeholder="Name" required=""/>
-													<input type="text" name="email" class="email" placeholder="Email" required=""/>
-													<input type="text" name="phone" class="phone" placeholder="Phone" required=""/>
-													<div class="section_drop">
-													<select id="country1" onchange="change_country(this.value)" class="frm-field required">
-														<option value="null"> Select City</option>
-																		<option value="null"> Select City</option>
-														<option value="city">Amsterdam</option>
-														<option value="city">Bahrain</option>
-														<option value="city">Cannes</option>
-														<option value="city">Dublin</option>
-														<option value="city">Edinburgh</option>
-														<option value="city">Florence</option>
-														<option value="city">Georgia</option>
-														<option value="city">Hungary</option>
-														<option value="city">Hong Kong</option>
-														<option value="city">Johannesburg</option>
-														<option value="city">Kiev</option>
-														<option value="city">London</option>
-														<option value="city">Others...</option>
-													</select>
-												   </div>
-													<input type="submit" value="Done">
-
-													</div>
-												</form>
-
-													</div>
-									  </span>
-									</div>
-								  </div>
-								    <!-- //card3 -->
-								 </div>
+                                        @endforeach
+                                    <!-- //card1 -->
+								</div>
 							</div>
 							<div role="tabpanel" class="tab-pane fade" id="tours" aria-labelledby="tours-tab">
 								   <div class="section__content clearfix">
@@ -668,15 +519,15 @@
 	         <div class="grid cars-main">
 			  <div class="col-md-7 slide-show-w3l">
 			     <!--//screen-gallery-->
-				 <h3 class="tittle top">NEW CARS</h3>
+				 <h3 class="tittle top">PRODUCTS</h3>
 				 <h6 class="sub">Great Prices. Great Vehicles. Great Service.</h6>
 							<div class="car-view-slider">
 					          <ul id="flexiselDemo">
 							 <li>
 								 <a href="#"><img src="{{ asset('salaat/sp-4el.jpg') }}" alt=""/>
 								  <div class="caption">
-										<h3><a href="upcoming.html">Ford Mustang GT 500</a></h3>
-										<span>Catchy Carz</span>
+										{{-- <h3><a href="upcoming.html">Ford Mustang GT 500</a></h3>
+										<span>Catchy Carz</span> --}}
 
 									</div>
 								 </a>
@@ -685,8 +536,8 @@
 							 <li>
 								 <a href="#"><img src="{{ asset('salaat/sp-4el.jpg') }}" alt=""/>
 								 <div class="caption">
-										<h3><a href="upcoming.html">Acura TLX</a></h3>
-										<span>Catchy Carz</span>
+										{{-- <h3><a href="upcoming.html">Acura TLX</a></h3>
+										<span>Catchy Carz</span> --}}
 
 									</div>
 								 </a>
@@ -694,8 +545,8 @@
 							 <li>
 								 <a href="#"><img src="{{ asset('salaat/sp-4el.jpg') }}" alt=""/>
 								  <div class="caption">
-										<h3><a href="upcoming.html"> McLaren MP4-12c</a></h3>
-										<span>Catchy Carz</span>
+										{{-- <h3><a href="upcoming.html"> McLaren MP4-12c</a></h3>
+										<span>Catchy Carz</span> --}}
 
 									</div>
 								 </a>
@@ -703,10 +554,10 @@
 							 <li>
 								 <a href="#"><img src="{{ asset('salaat/sp-4el.jpg') }}" alt=""/>
 									<div class="caption">
-										<h3><a href="upcoming.html">BMW Z4</a></h3>
-									<span>Catchy Carz</span>
+										{{-- <h3><a href="upcoming.html">BMW Z4</a></h3> --}}
+									{{-- <span>Catchy Carz</span>
 
-									</div>
+									</div> --}}
 								 </a>
 							 </li>
 							</ul>
@@ -732,18 +583,17 @@
                         }
                     </style>
 					<div class="col-md-5 new-car-used">
-					  <h3 class="tittle top">USED CARS</h3>
-					  <h6 class="sub">Used Cars at Shocking Prices.</h6>
+					  <h3 class="tittle top"></h3>
 					  <div class="used-one">
 					     <figure class="effect-zoe">
 							 <a href="used.html"><img src="{{ asset('salaat/spt-home.jpg') }}" alt="Used Car" class="imgss"></a>
 							<figcaption>
-								<h4>CATCHY <span>CARZ</span></h4>
-								<p class="icon-links">
+								{{-- <h4>CATCHY <span>CARZ</span></h4> --}}
+								{{-- <p class="icon-links">
 									<a href="#"><i class="glyphicon glyphicon-heart-empty"></i></a>
 									<a href="#"><i class="glyphicon glyphicon-eye-open"></i></a>
 									<a href="#"><i class="glyphicon glyphicon-paperclip"></i></a>
-								</p>
+								</p> --}}
 							{{-- <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> --}}
 							</figcaption>
 						</figure>
@@ -753,12 +603,12 @@
 					     <figure class="effect-zoe">
 							<a href="used.html"><img src="{{ asset('salaat/spt-30.jpg') }}" alt="Used Car" class="imgss"></a>
 							<figcaption>
-								<h4>CATCHY <span>CARZ</span></h4>
+								{{-- <h4>CATCHY <span>CARZ</span></h4>
 								<p class="icon-links">
 									<a href="#"><i class="glyphicon glyphicon-heart-empty"></i></a>
 									<a href="#"><i class="glyphicon glyphicon-eye-open"></i></a>
 									<a href="#"><i class="glyphicon glyphicon-paperclip"></i></a>
-								</p>
+								</p> --}}
 							{{-- <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> --}}
 							</figcaption>
 						</figure>
@@ -771,115 +621,30 @@
 	<!-- /bottom-banner -->
 	<div class="banner-bottom">
 	   <div class="container">
-          <div class="bottom-form">
-			<div class="inner-text">
-
-			 <form action="#" method="post">
-				<h3>Choose Your Best Car</h3>
-					<div class="best-hot">
-						<h5>Name</h5>
-						<input type="text" class="name active" placeholder="Name" required="">
-					</div>
-					<div class="best-hot">
-						<h5>Email</h5>
-						<input type="text" class="email" placeholder="Email" required="">
-					</div>
-					<div class="section_drop2">
-					<h5>City</h5>
-						<select id="country6" onchange="change_country(this.value)" class="frm-field required">
-														<option value="null"> Select City</option>
-														<option value="city">Amsterdam</option>
-														<option value="city">Bahrain</option>
-														<option value="city">Cannes</option>
-														<option value="city">Dublin</option>
-														<option value="city">Edinburgh</option>
-														<option value="city">Florence</option>
-														<option value="city">Georgia</option>
-														<option value="city">Hungary</option>
-														<option value="city">Hong Kong</option>
-														<option value="city">Johannesburg</option>
-														<option value="city">Kiev</option>
-														<option value="city">London</option>
-														<option value="city">Others...</option>
-													</select>
-												   </div>
-					<input type="submit" value="Book Now">
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
+            <div class="bottom-form">
+			    <div class="inner-text"></div>
+		    </div>
+	    </div>
+    </div>
 	<!-- //bottom-banner -->
 	<!-- /slider1 -->
-			<div class="slider1">
-		<div class="arrival-grids">
-			 <ul id="flexiselDemo1">
-				 <li>
-					 <a href="single.html"><img src="images/f1.jpg" alt=""/>
-					  <div class="caption">
-							<h3><a href="single.html">Mercedes-Benz C250 CDI</a></h3>
-							<span>Catchy Carz</span>
+		<div class="slider1">
+		    <div class="arrival-grids">
+                <ul id="flexiselDemo1">
+                    @foreach ($subCategoryBannerImages as $bannerImages)
+                        <li>
+                            <a href="{{ url('products/detail', [ $bannerImages['sub_name'] , $bannerImages['sub_id']]) }}"><img src="{{ asset($bannerImages['images']) }}" alt=""/>
+                            <div class="caption">
+                                <h3><a href="{{ url('products/detail', [ $bannerImages['sub_name'] , $bannerImages['sub_id']]) }}">{{ $bannerImages['sub_name'] }}</a></h3>
+                                <span>Rupee = {{ $bannerImages['price'] }}</span>
 
-						</div>
-					 </a>
-
-				 </li>
-				 <li>
-					 <a href="single.html"><img src="images/f2.jpg" alt=""/>
-					 <div class="caption">
-							<h3><a href="single.html">Audi A4 2.0 TDI</a></h3>
-							<span>Catchy Carz</span>
-
-						</div>
-					 </a>
-				 </li>
-				 <li>
-					 <a href="single.html"><img src="images/f3.jpg" alt=""/>
-					  <div class="caption">
-							<h3><a href="single.html">Ford Mustang GT 500</a></h3>
-							<span>Catchy Carz</span>
-
-						</div>
-					 </a>
-				 </li>
-				 <li>
-					 <a href="single.html"><img src="images/f4.jpg" alt=""/>
-					    <div class="caption">
-							<h3><a href="single.html">Ford Mustang GT 350</a></h3>
-						<span>Catchy Carz</span>
-
-						</div>
-					 </a>
-				 </li>
-				 <li>
-					 <a href="single.html"><img src="images/f7.jpg" alt=""/>
-					    <div class="caption">
-							<h3><a href="single.html">BMW M4</a></h3>
-							<span>Catchy Carz</span>
-
-						</div>
-					 </a>
-				 </li>
-				 <li>
-					 <a href="single.html"><img src="images/f5.jpeg" alt=""/>
-					 <div class="caption">
-							<h3><a href="single.html">Ferrari F430</a></h3>
-							<span>Catchy Carz</span>
-
-						</div>
-					 </a>
-				 </li>
-				  <li>
-					 <a href="single.html"><img src="images/f8.jpg" alt=""/>
-					    <div class="caption">
-							<h3><a href="single.html">BMW X4 M Sport</a></h3>
-							<span>Catchy Carz</span>
-					    </div>
-					 </a>
-				 </li>
-				</ul>
-		  </div>
-	  </div>
+                            </div>
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+		    </div>
+	    </div>
 	<!-- //slider -->
 	<!-- Services -->
 	<div class="updates-agile">
@@ -985,7 +750,7 @@
 								<div class="news-updates">
 									<div class="update-info-w3l">
 										<div class="col-md-5 tab-image">
-											<iframe src="https://www.youtube.com/embed/XoXHwhADS4k" frameborder="0" allowfullscreen></iframe>
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/8TXLIgeFInk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 										</div>
 										<div class="col-md-7 tab-info">
 										<h4><a href="single.html">Audi A4 2016 review - Car Keys </a></h4>

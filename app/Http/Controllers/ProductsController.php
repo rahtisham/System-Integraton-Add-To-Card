@@ -18,7 +18,9 @@ class ProductsController extends Controller
     public function index()
     {
 
-        return view('main');
+        $subCategoryBannerImages = subCategory::latest('sub_id')->limit(7)->get();
+        $subCategories = subCategory::latest('sub_id')->limit(3)->get();
+        return view('main'  , ['subCategories' => $subCategories , 'subCategoryBannerImages' => $subCategoryBannerImages]);
 
     }
 
@@ -26,46 +28,26 @@ class ProductsController extends Controller
     public function products($name , $id)
     {
 
+
+        $latestPost = subCategory::latest('sub_id')->limit(3)->get();
         $productsList = subCategory::where('s_id' , $id)->get();
-        return view('productlist' , ['products' => $productsList]);
+        return view('productlist' , ['products' => $productsList , 'latestPost' => $latestPost]);
 
     }
 
 
     public function productDetail($name , $id)
     {
+        $latestPost = subCategory::latest('sub_id')->limit(3)->get();
         $productDetails = subCategory::where('sub_id' , $id)->get();
-        return view('product-detail', ['productDetails' => $productDetails]);
+        return view('product-detail', ['productDetails' => $productDetails , 'latestPost' => $latestPost]);
     }
 
 
 
     public function cart()
     {
-        $categories = [];
-        $sidebare = SuperCategory::all();
-
-        foreach ($sidebare as $side)
-        {
-
-            $subName = $side->subCat[0]['sub_name'];
-            $subCatId = $side->subCat[0]['s_id'];
-            $subCatImage = $side->subCat[0]['images'];
-            $subID = $side->subCat[0]['sub_id'];
-
-            $supCatName = $side->s_name;
-            $supCatId = $side->s_id;
-            $categories[] = [
-
-               'name' => $supCatName,
-               'supCatID' => $supCatId,
-               'subName' => $subName,
-               'sub_id' => $subID,
-            ];
-
-        }
-
-        return view('cart' , ['categories'=> $categories]);
+        return view('cart');
     }
 
     public function addToCart($sub_id)
@@ -119,6 +101,8 @@ class ProductsController extends Controller
     public function checkout(Request $request)
     {
 
+
+
         $validator = Validator::make($request->all(), [
 
             'productName' => 'required',
@@ -149,16 +133,25 @@ class ProductsController extends Controller
             'requirement.required' => 'Extra Requirement is required',
         ])->validate();
 
+        //  return $request->subtotal;
+        $subtotal = $request->subtotal;
+        $subtotals = array_sum($subtotal);
+
+        $exp = $request->productName;
+        $productName = json_encode($exp);
+
+        $quantity = $request->quantity;
+        $quanty = array_sum($quantity);
 
         $id = $request->get('subid');
         $customerOrders = [
 
             'order_id' => '#'.str_pad($request->$id + $id, 8, "0", STR_PAD_LEFT),
-            'Items_names' => $request['productName'],
+            'Items_names' => $productName,
             'order_amount' => $request['price'],
-            'quantity' => $request['quantity'],
+            'quantity' => $quanty,
             'deliver_charges' => "100",
-            'total_amount' => $request['subtotal'],
+            'total_amount' => $subtotals,
             'name' => $request['name'],
             'contactNumber' => $request['contact'],
             'paymentType' => $request['payment'],
@@ -174,8 +167,8 @@ class ProductsController extends Controller
         ];
 
         $orders = CustomerOrders::store($customerOrders);
-
-        if( $orders)
+        // return $orders->status;
+        if($orders)
         {
             if($id) {
                 $cart = session()->get('cart');
@@ -183,11 +176,16 @@ class ProductsController extends Controller
                     unset($cart[$id]);
                     session()->put('cart', $cart);
                 }
-                return redirect()->back()->with('success', 'Products Have Been submited');
+                return redirect('thank-you');
             }
 
         }
 
+    }
+
+    public function thnakYou()
+    {
+        return view('thank-you');
     }
 
 

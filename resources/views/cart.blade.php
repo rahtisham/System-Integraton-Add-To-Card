@@ -113,7 +113,7 @@
                                                 <div class="col-sm-3 hidden-xs"><img src="{{ asset($details['image']) }}" width="50" height="50" class="img-responsive"/></div>
                                                 <div class="col-sm-9 align-middle">
                                                     <h4 class="nomargin">{{ $details['sub_name'] }}</h4>
-                                                    <input type="hidden" name="productName" value="{{ $details['sub_name'] }}">
+                                                    <input type="hidden" name="productName[]" value="{{ $details['sub_name'] }}">
                                                     <input type="hidden" name="subid" value="{{ $id }}">
                                                 </div>
                                             </div>
@@ -122,11 +122,11 @@
                                         <input type="hidden" name="price" value="{{ $details['price'] }}">
                                         </td>
                                         <td data-th="Quantity">
-                                            <input style="width: 100%" type="number" name="quantity"  value="{{ $details['quantity'] }}" class="form-control quantity update-cart" />
+                                            <input style="width: 100%" type="number" name="quantity[]"  value="{{ $details['quantity'] }}" class="form-control quantity update-cart" />
                                         </td>
                                         <td data-th="Subtotal" class="text-center">
                                             <h4 class="prices">${{ $details['price'] * $details['quantity'] }}</h4>
-                                            <input style="width: 100%" type="hidden" name="subtotal"  value="{{ $details['price'] * $details['quantity'] }}" class="form-control quantity update-cart" />
+                                            <input style="width: 100%" type="hidden" name="subtotal[]"  value="{{ $details['price'] * $details['quantity'] }}" class="form-control quantity update-cart" />
                                         </td>
                                         <td class="actions" data-th="">
                                             <button class="btn btn-danger btn-sm remove-from-cart"><i class="glyphicon glyphicon-trash" aria-hidden="true"></i></button>

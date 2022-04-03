@@ -2,47 +2,94 @@
 <div class="footer">
     <div class="container">
         <div class="footer-grids">
-            <div class="col-md-4 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
+            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
                 <h3>About Us</h3>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.<span>Excepteur sint occaecat cupidatat
-                    non proident, sunt in culpa qui officia deserunt mollit.</span></p>
+                <p>Systems Engineering is an R&D based organization manufacturing computer and industrial products. Established in 1994, we have been serving the microcomputer and electronics market in Pakistan with the reputation of locally manufacturing and marketing electronics products with full backup and support ensuring complete customer satisfaction.</span></p>
             </div>
-            <div class="col-md-4 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
+            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
                 <h3>Contact Info</h3>
                 <ul>
-                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
-                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Office # 412, 4th Floor, Madina <span> City Mall, Abdullah Haroon Road, Saddar,</span> <span>Karachi-74400, Pakistan </span></li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@systemsintegration.com">info@systemsintegration.com</a></li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+92(21)-35217256, 35654771-74</li>
                 </ul>
             </div>
-            <div class="col-md-4 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
+            <div class="col-md-1 footer-grid animated wow slideInLeft" data-wow-delay=".7s"></div>
+            <div class="col-md-2 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
+                <h3>Our Products</h3>
+                <a href="#"><p>Salaat Panel</p></a>
+                <a href="#"><p>Salaat Clock</p></a>
+                <a href="#"><p>Plain Clock</p></a>
+                <a href="#"><p>Plain Clock MX</p></a>
+                <a href="#"><p>Classic Intecom</p></a>
+                <a href="#"><p>Salat Panel LED</p></a>
+                <a href="#"><p>Panel Horizontal</p></a>
+
+                <!--<div class="footer-grid-left">
+                    <a href="single.html"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="footer-grid-left">
+                    <a href="single.html"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="footer-grid-left">
+                    <a href="single.html"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="footer-grid-left">
+                    <a href="single.html"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="footer-grid-left">
+                    <a href="single.html"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="footer-grid-left">
+                    <a href="single.html"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="footer-grid-left">
+                    <a href="single.html"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="footer-grid-left">
+                    <a href="single.html"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
+                </div> -->
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
                 <h3>Blog Posts</h3>
                 <div class="footer-grid-sub-grids">
                     <div class="">
-                        <h4><a href="{{ route('home') }}">Home</a></h4>
+                        <h4><a href="single.html">culpa qui officia deserunt</a></h4>
+                        <p>Posted On 25/3/2016</p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
                 <div class="footer-grid-sub-grids">
+                    {{-- <div class="footer-grid-sub-grid-left">
+                        <a href="single.html"><img src="images/10.jpg" alt=" " class="img-responsive" /></a>
+                    </div> --}}
                     <div class="">
-                        <h4><a href="{{ route('contact-us') }}">Contact Us</a></h4>
+                        <h4><a href="single.html">Quis autem vel eum iure</a></h4>
+                        <p>Posted On 25/4/2016</p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
                 <div class="footer-grid-sub-grids">
+                    {{-- <div class="footer-grid-sub-grid-left">
+                        <a href="single.html"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
+                    </div> --}}
                     <div class="">
-                        <h4><a href="single.html">Privacy & Policy</a></h4>
+                        <h4><a href="single.html">Quis autem vel eum iure</a></h4>
+                        <p>Posted On 25/5/2016</p>
                     </div>
                     <div class="clearfix"> </div>
+                    <a href="https://api.whatsapp.com/send?phone=3197010240285" class="btn btn-success" style="background-color: #25D366;">Contact us on WhatsApp</a>
+
                 </div>
             </div>
             <div class="clearfix"> </div>
         </div>
         <div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
-            <h2><a href="{{ route('home') }}">SYSTEMS INTEGRATION <span>Eye it – try it – buy it!</span></a></h2>
+            <h2><a href="index.html">Systems Integration <span>Eye it – try it – buy it!</span></a></h2>
         </div>
         <div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
-            {{-- <p>&copy 2016 Catchy Carz. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p> --}}
+            <p>&copy 2021 Systems Integration. All rights reserved | Design by <a href="http://oreotech.com/">Oreo Tech</a></p>
         </div>
     </div>
 </div>
