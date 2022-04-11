@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Http\Request;
 
 class contact extends Mailable
 {
@@ -30,6 +31,6 @@ class contact extends Mailable
     public function build()
     {
         // return $this->view('view.name');
-        return $this->subject('The Email Has Been Sent From System Integration')->view('mail.sendemail');
+        return $this->subject('The Email Has Been Sent From System Integration')->view('mail.sendemail', $this->contact)->from('decentomais90@gmail.com', 'Mail Testing');
     }
 }

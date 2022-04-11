@@ -6,7 +6,7 @@
 					<div class="modal-content about">
 						<div class="modal-header">
 							<button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<div class="discount">
+								<!-- <div class="discount">
 									<h3>Get Offers & Discount of</h3>
 									<p>Catchy Carz Brand VL in New York</p>
 										<form action="#" method="post">
@@ -20,7 +20,7 @@
 											</select>
 											<input type="text" class="Pin code" placeholder="Pin code" required="">
 										</form>
-								</div>
+								</div> -->
 						</div>
 						 <div class="modal-body about">
 
@@ -321,7 +321,7 @@
 						</div>
 						<div class="related-post-right">
 							<h4 class="p-1"><a href="single.html">{{ $post['sub_name'] }}</a></h4>
-							<h4 class="p-1">Rupee = {{ $post['price'] }}</h4><br>
+							<h4 class="p-1">PKR = {{ $post['price'] }}</h4><br>
                             <a href="{{ url('products/detail', [ $post['sub_name'] , $post['sub_id']]) }}" class="btn btn-info btn-sm">View Product</a>
                             </div>
                         <div class="clearfix"> </div>

@@ -7,7 +7,7 @@
 					<div class="modal-content about">
 						<div class="modal-header">
 							<button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<div class="discount">
+								<!-- <div class="discount">
 									<h3>Get Offers & Discount of</h3>
 									<p>Catchy Carz Brand VL in New York</p>
 										<form action="#" method="post">
@@ -21,7 +21,7 @@
 											</select>
 											<input type="text" name="pin code" class="Pin code" placeholder="Pin code" required="">
 										</form>
-								</div>
+								</div> -->
 						</div>
 						 <div class="modal-body about">
 
@@ -157,7 +157,7 @@
                                                                     <img src="{{ asset($subCategory['images']) }}" alt="Catchy Carz">
                                                                     <div class="car_description">
                                                                         <h4><a href="{{ url('products/detail', [ $subCategory['sub_name'] , $subCategory['sub_id']]) }}">{{ $subCategory['sub_name'] }}</a></h4>
-                                                                        <div class="price"><span class="fa fa-rupee"></span><span class="font25">Rupee = {{ $subCategory['price'] }}</span></div>
+                                                                        <div class="price"><span class="font25">PKR = {{ $subCategory['price'] }}</span></div>
                                                                     </div>
                                                                 </div>
                                                             </span>
@@ -178,7 +178,7 @@
 													<img src="images/f4.jpg" alt="Catchy Carz">
 													<div class="car_description">
 														 <h4><a href="single.html"> Ford Mustang GT 350</a></h4>
-														 <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 8000 - $ 11000</span></div>
+														 <div class="price"><span class="font25">PKR 8000 - PKR 11000</span></div>
 														 <p>Estimated Price</p>
 														 <div class="date">June 2016</div>
 														 <p>Expected Launch</p>
@@ -234,7 +234,7 @@
 													<img src="images/f5.jpeg" alt="Catchy Carz">
 													<div class="car_description">
 														 <h4><a href="#">Ferrari F430</a></h4>
-														 <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 7000 - $ 13000</span></div>
+														 <div class="price"><span class="font25">PKR 7000 - PKR 13000</span></div>
 														 <p>Estimated Price</p>
 														 <div class="date">July 2016</div>
 														 <p>Expected Launch</p>
@@ -289,7 +289,7 @@
 													<img src="images/f6.jpeg" alt="Catchy Carz">
 													<div class="car_description">
 														 <h4><a href="single.html"> Mercedes-Benz C250 CDI</a></h4>
-														 <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 5000 - $ 10000</span></div>
+														 <div class="price"><span class="font25">PKR 5000 - PKR 10000</span></div>
 														 <p>Estimated Price</p>
 														 <div class="date">Aug 2016</div>
 														 <p>Expected Launch</p>
@@ -349,7 +349,7 @@
 													<img src="images/f7.jpg" alt="Catchy Carz">
 													<div class="car_description">
 														 <h4><a href="single.html">BMW M4</a></h4>
-														 <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 6000 - $ 11000</span></div>
+														 <div class="price"><span class="font25">PKR 6000 - PKR 11000</span></div>
 														 <p>Estimated Price</p>
 														 <div class="date">Mar 2017</div>
 														 <p>Expected Launch</p>
@@ -403,7 +403,7 @@
 													<img src="images/f8.jpg" alt="Catchy Carz">
 													<div class="car_description">
 														 <h4><a href="single.html"> BMW X4 M Sport</a></h4>
-														 <div class="price"><span class="fa fa-rupee"></span><span class="font25">$ 7000 - $ 12000</span></div>
+														 <div class="price"><span class="font25">PKR 7000 - PKR 12000</span></div>
 														 <p>Estimated Price</p>
 														 <div class="date">Mar 2017</div>
 														 <p>Expected Launch</p>
@@ -457,7 +457,7 @@
 													<img src="images/f9.jpg" alt="Catchy Carz">
 													<div class="car_description">
 														 <h4><a href="single.html">BMW M3 </a></h4>
-														 <div class="price"><span class="fa fa-rupee"></span><span class="font25">&nbsp;$ 5000 - $ 10000</span></div>
+														 <div class="price"><span class="font25">&nbsp;PKR 5000 - PKR 10000</span></div>
 														 <p>Estimated Price</p>
 														 <div class="date">Mar 2017</div>
 														 <p>Expected Launch</p>
@@ -636,7 +636,7 @@
                             <a href="{{ url('products/detail', [ $bannerImages['sub_name'] , $bannerImages['sub_id']]) }}"><img src="{{ asset($bannerImages['images']) }}" alt=""/>
                             <div class="caption">
                                 <h3><a href="{{ url('products/detail', [ $bannerImages['sub_name'] , $bannerImages['sub_id']]) }}">{{ $bannerImages['sub_name'] }}</a></h3>
-                                <span>Rupee = {{ $bannerImages['price'] }}</span>
+                                <span>PKR = {{ $bannerImages['price'] }}</span>
 
                             </div>
                             </a>

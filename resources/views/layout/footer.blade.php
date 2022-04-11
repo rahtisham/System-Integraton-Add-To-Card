@@ -1,6 +1,7 @@
 <!-- footer -->
 <div class="footer">
     <div class="container">
+        <div class="row justify-content-center">
         <div class="footer-grids">
             <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
                 <h3>About Us</h3>
@@ -51,7 +52,7 @@
                 </div> -->
                 <div class="clearfix"> </div>
             </div>
-            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
+            <!-- <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
                 <h3>Blog Posts</h3>
                 <div class="footer-grid-sub-grids">
                     <div class="">
@@ -82,7 +83,7 @@
                     <a href="https://api.whatsapp.com/send?phone=3197010240285" class="btn btn-success" style="background-color: #25D366;">Contact us on WhatsApp</a>
 
                 </div>
-            </div>
+            </div> -->
             <div class="clearfix"> </div>
         </div>
         <div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
@@ -91,7 +92,8 @@
         <div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
             <p>&copy 2021 Systems Integration. All rights reserved | Design by <a href="http://oreotech.com/">Oreo Tech</a></p>
         </div>
-    </div>
+                    </div> 
+                </div>
 </div>
 
 <script src="js/bootstrap.js"></script>

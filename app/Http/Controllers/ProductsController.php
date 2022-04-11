@@ -150,6 +150,7 @@ class ProductsController extends Controller
             'Items_names' => $productName,
             'order_amount' => $request['price'],
             'quantity' => $quanty,
+            'status' => "Pending",
             'deliver_charges' => "100",
             'total_amount' => $subtotals,
             'name' => $request['name'],

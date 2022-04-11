@@ -244,12 +244,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                    </div>
                    <div class="clearfix"></div>
            <!--banner-info-->
-           <div class="banner-info">
+           <!-- <div class="banner-info">
              <h1><a href="#">Catchy <span class="logo-sub">Carz</span> </a></h1>
                <h2><span>COME LOOK </span> <span>AT THE SELECTION! </span></h2>
                <p>Eye it – try it – buy it!</p>
 
-           </div>
+           </div> -->
        <!--//banner-info-->
        </div>
     </div>
@@ -264,12 +264,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- footer -->
 <div class="footer">
     <div class="container">
+    <div class="row justify-content-center">
         <div class="footer-grids">
-            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
+            <div class="col-md-4 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
                 <h3>About Us</h3>
                 <p>Systems Engineering is an R&D based organization manufacturing computer and industrial products. Established in 1994, we have been serving the microcomputer and electronics market in Pakistan with the reputation of locally manufacturing and marketing electronics products with full backup and support ensuring complete customer satisfaction.</span></p>
             </div>
-            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
+            <div class="col-md-1 footer-grid animated wow slideInLeft" data-wow-delay=".7s"></div>
+            <div class="col-md-4 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
                 <h3>Contact Info</h3>
                 <ul>
                     <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Office # 412, 4th Floor, Madina <span> City Mall, Abdullah Haroon Road, Saddar,</span> <span>Karachi-74400, Pakistan </span></li>
@@ -314,7 +316,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div> -->
                 <div class="clearfix"> </div>
             </div>
-            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
+            <!-- <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
                 <h3>Blog Posts</h3>
                 <div class="footer-grid-sub-grids">
                     <div class="">
@@ -344,16 +346,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="clearfix"> </div>
                     <a href="https://api.whatsapp.com/send?phone=3197010240285" class="btn btn-success" style="background-color: #25D366;">Contact us on WhatsApp</a>
                 </div>
-            </div>
+            </div> -->
             <div class="clearfix"> </div>
         </div>
         <div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
             <h2><a href="index.html">Systems Integration <span>Eye it – try it – buy it!</span></a></h2>
         </div>
         <div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
-            <p>&copy 2021 Systems Integration. All rights reserved | Design by <a href="http://oreotech.com/">Oreo Tech</a></p>
+            <p>&copy 2022 Systems Integration. All rights reserved | Design by <a href="http://oreotech.com/">Oreo Tech</a></p>
         </div>
     </div>
+</div>
 </div>
 
 

@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Email Template</title>
 </head>
 <body>
-    <h1>Email Is Sent</h1>
+    <p>Name: {{ $contact['name'] }}</p>
+    <p>Email: {{ $contact['email'] }}</p>
+    <p>Message: {{ $contact['message'] }}</p>
 </body>
 </html>

@@ -6,7 +6,7 @@
 					<div class="modal-content about">
 						<div class="modal-header">
 							<button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<div class="discount">
+								<!-- <div class="discount">
 									<h3>Get Offers & Discount of</h3>
 									<p>Catchy Carz Brand VL in New York</p>
 										<form action="#" method="post">
@@ -20,7 +20,7 @@
 											</select>
 											<input type="text" class="Pin code" placeholder="Pin code" required="">
 										</form>
-								</div>
+								</div> -->
 						</div>
 						 <div class="modal-body about">
 
@@ -202,7 +202,7 @@
 					    <div class="news-text coming" style="padding-top: 30px;">
 						    <h3><a href="{{ url('products/detail', [ $product['sub_name'] , $product['sub_id']]) }}">{{ $product['sub_name'] }}</a></h3>
 							{{-- <h5>Launched On: 07-Jun-2016</h5> --}}
-							<p class="news">Rupee:  {{ $product->price }} </p>
+							<p class="news">Price {{ $product->price }} PKR </p>
 							<h6>Not rated yet,<a href="#"> Product Detail</a></h6>
 							<a href="{{ url('products/detail', [ $product['sub_name'] , $product['sub_id']]) }}" class="read hvr-shutter-in-horizontal">Product Detail</a>
 							<a href="{{ route('add.to.cart', $product->sub_id) }}" class="read hvr-shutter-in-horizontal">Add To Cart</a>
@@ -228,7 +228,7 @@
                                 </div>
                                 <div class="related-post-right">
                                     <h4 class="p-1"><a href="single.html">{{ $post['sub_name'] }}</a></h4>
-                                    <h4 class="p-1">Rupee = {{ $post['price'] }}</h4>
+                                    <h4 class="p-1">PKR = {{ $post['price'] }}</h4>
                                     <a style="margin-top: 10px;" href="{{ url('products/detail', [ $post['sub_name'] , $post['sub_id']]) }}" class="btn btn-info btn-sm">View Product</a>
                                     </div>
                                 <div class="clearfix"> </div>
