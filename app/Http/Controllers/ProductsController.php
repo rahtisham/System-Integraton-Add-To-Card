@@ -101,7 +101,7 @@ class ProductsController extends Controller
     public function checkout(Request $request)
     {
 
-
+         
 
         $validator = Validator::make($request->all(), [
 
@@ -141,12 +141,15 @@ class ProductsController extends Controller
         $productName = json_encode($exp);
 
         $quantity = $request->quantity;
-        $quanty = array_sum($quantity);
+        $quanty = json_encode($quantity);
 
         $id = $request->get('subid');
+
+        $orderId = strtotime("now");
+
         $customerOrders = [
 
-            'order_id' => '#'.str_pad($request->$id + $id, 8, "0", STR_PAD_LEFT),
+            'order_id' => '#'.str_pad($request->$id + $orderId, 8, "0", STR_PAD_LEFT),
             'Items_names' => $productName,
             'order_amount' => $request['price'],
             'quantity' => $quanty,

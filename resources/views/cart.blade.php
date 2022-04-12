@@ -22,10 +22,7 @@
                     </div>
                     <div class="form-group">
                         <select class="form-control form-control-lg" name="payment">
-                            <option value="">Select A Payment</option>
-                            <option value="Paypal">Paypal</option>
-                            <option value="Stripe">Stripe</option>
-                            <option value="Authorize">Authorize</option>
+                            <option value="Cash on Delivery">Cash on Delivery</option>
                         </select>
                         @error('payment')
                             <span class="text-danger">{{ $message }}</span>
@@ -44,12 +41,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <select class="form-control form-control-lg" name="city">
-                            <option value="">Select A City</option>
-                            <option value="Karachi">Karachi</option>
-                            <option value="Lahore">Lahore</option>
-                            <option value="Islamabad">Islamabad</option>
-                        </select>
+                    <input type="text" name="city" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="City">
                         @error('city')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror

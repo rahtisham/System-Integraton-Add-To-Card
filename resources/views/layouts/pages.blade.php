@@ -271,24 +271,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <p>Systems Engineering is an R&D based organization manufacturing computer and industrial products. Established in 1994, we have been serving the microcomputer and electronics market in Pakistan with the reputation of locally manufacturing and marketing electronics products with full backup and support ensuring complete customer satisfaction.</span></p>
             </div>
             <div class="col-md-1 footer-grid animated wow slideInLeft" data-wow-delay=".7s"></div>
-            <div class="col-md-4 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
+            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
                 <h3>Contact Info</h3>
                 <ul>
                     <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Office # 412, 4th Floor, Madina <span> City Mall, Abdullah Haroon Road, Saddar,</span> <span>Karachi-74400, Pakistan </span></li>
                     <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@systemsintegration.com">info@systemsintegration.com</a></li>
-                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+92(21)-35217256, 35654771-74</li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+923360837535</li>
                 </ul>
             </div>
             <div class="col-md-1 footer-grid animated wow slideInLeft" data-wow-delay=".7s"></div>
-            <div class="col-md-2 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
+            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
                 <h3>Our Products</h3>
-                <a href="#"><p>Salaat Panel</p></a>
-                <a href="#"><p>Salaat Clock</p></a>
-                <a href="#"><p>Plain Clock</p></a>
-                <a href="#"><p>Plain Clock MX</p></a>
-                <a href="#"><p>Classic Intecom</p></a>
-                <a href="#"><p>Salat Panel LED</p></a>
-                <a href="#"><p>Panel Horizontal</p></a>
+                <a href="{{ url('products/Salaat Panel/1') }}"><p>Salaat Panel</p></a>
+                <a href="{{ url('products/Panel Horizontal/7') }}"><p>Salaat Panel Horizontal</p></a>
+                <a style="color: gray;" href="{{ url('products/Salaat Panel Vertical/6') }}">Salaat Panel Vertical</p></a>
+                <a style="color: gray;" href="{{ url('products/Salaat Panel With Quran & Azan/9') }}">Salaat Panel With Quran & Azan</p></a>
+                <a style="color: gray;" href="{{ url('products/Jamaat Next Change Panel/10') }}">Jamaat Next Change Panel</p></a>
+                <a style="color: gray;" href="{{ url('products/Salaat Clock With Quran & Azan/11') }}">Salaat Clock With Quran & Azan</p></a>
+                <a style="color: gray;" href="{{ url('products/Plain Clock/3') }}">Plain Clock</p></a>
 
                 <!--<div class="footer-grid-left">
                     <a href="single.html"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
@@ -353,13 +353,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <h2><a href="index.html">Systems Integration <span>Eye it – try it – buy it!</span></a></h2>
         </div>
         <div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
-            <p>&copy 2022 Systems Integration. All rights reserved | Design by <a href="http://oreotech.com/">Oreo Tech</a></p>
+            <p>&copy 2022 Systems Integration. All rights reserved</a></p>
         </div>
     </div>
 </div>
 </div>
 
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=3360837535" class="whatsappIcon" target="_blank">
+    <i class="fa fa-whatsapp whatsappIcon-float"></i>
+    </a>
+    
 <script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery.flexisel.js') }}"></script>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
