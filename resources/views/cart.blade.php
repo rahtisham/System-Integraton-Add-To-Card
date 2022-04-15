@@ -15,7 +15,7 @@
                 <h2>Complete Your Order</h2><br><br>
 
                     <div class="form-group">
-                        <input type="contact" name="contact" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="03000000000">
+                        <input type="contact" name="contact" value="{{ old('contact') }}" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="03000000000">
                         @error('contact')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -29,34 +29,34 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <input type="text" name="name" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Your Name">
+                        <input type="text" name="name" value="{{ old('name') }}" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Your Name">
                         @error('name')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Your Email">
+                        <input type="email" name="email" value="{{ old('email') }}" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Your Email">
                         @error('email')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-group">
-                    <input type="text" name="city" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="City">
+                    <input type="text" name="city" value="{{ old('city') }}" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="City">
                         @error('city')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <textarea name="deliveryAddress" class="form-control form-control-lg" placeholder="Delivery Address" id="deliveryAddress" cols="30" rows="10"></textarea>
+                        <textarea name="deliveryAddress" value="{{ old('deliveryAddress') }}" class="form-control form-control-lg" placeholder="Delivery Address" id="deliveryAddress" cols="30" rows="10"></textarea>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="landmark" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Your Landmark">
+                        <input type="text" name="landmark" value="{{ old('landmark') }}" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Your Landmark">
                         @error('landmark')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <input type="text" name="requirement" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Enter your extra requirement">
+                        <input type="text" name="requirement" value="{{ old('requirement') }}" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Enter your extra requirement">
                         @error('requirement')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror

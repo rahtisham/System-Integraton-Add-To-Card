@@ -38,7 +38,10 @@
         </div><!--end of col-sm-8-->
         <div class="col-sm 6"></div><!--end of col-sm-2-->
     </div><!--end of row-->
-    <div id="googleMap" style="width:100%;height:400px;"></div>
+    <div class="row">
+    <div class="mapouter w-100"><div class="gmap_canvas"><iframe width="1200" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;}</style><style>.gmap_canvas {overflow:hidden;background:none!important;}</style></div></div>
+
+    </div>
 </div><!--end of container-->
 <script>
     function myMap() {

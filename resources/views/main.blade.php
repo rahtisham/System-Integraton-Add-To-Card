@@ -766,8 +766,8 @@
 											<a href="single.html" class="read hvr-shutter-in-horizontal">Read More</a>
 										</div>
 										<div class="col-md-5 tab-image">
-											<iframe src="https://www.youtube.com/embed/NcoCLc0MNdA" frameborder="0" allowfullscreen></iframe>
-										</div>
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/8TXLIgeFInk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</div>
 
 										<div class="clearfix"></div>
 									</div>

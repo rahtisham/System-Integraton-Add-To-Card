@@ -68,7 +68,7 @@
 <body>
     <div id="app">
         <main class="py-4">
-            <div id="demo-1" data-zs-src='["images/hero.jpg"]' data-zs-overlay="dots">
+            <div id="demo-1" data-zs-src='["images/hero.jpg" , "images/hero2.jpg" , "images/hero.jpg"]' data-zs-overlay="dots">
                 <div class="demo-inner-content">
                    <div class="header-top">
                         <!-- /header-left -->
