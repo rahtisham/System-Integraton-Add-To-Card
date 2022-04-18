@@ -234,6 +234,7 @@ class ProductsController extends Controller
 
     public function formSubmit(Request $request)
     {
+
         $validator = Validator::make($request->all(), [
             'supCategory' => 'required',
             'subCategory' => 'required',
@@ -247,10 +248,28 @@ class ProductsController extends Controller
             'file:required' => 'file is required'
         ])->validate();
 
-        $name = $request->file('file')->getClientOriginalName();
-        $path = $request->file('file')->store('public/files');
+        $image = $request->file('file');
+        $image_name = strtotime("now").'.'.$image->getClientOriginalExtension();
+        $path = $image->move(public_path('files'), $image_name);
 
-        return $path;
+         $upload = [
+
+            's_id' => $request->supCategory,
+            'sub_name' => $request->subCategory,
+            'images' => $image_name,
+            'price' => $request->price,
+            'status' => 'Pending',
+
+        ];
+
+        $insert = subCategory::create($upload);
+        if($insert)
+        {
+            return "Data Has Been Inserted";
+        }
+        else{
+            return "Something wrong";
+        }
 
     }
 

@@ -33,7 +33,7 @@
             </div>
 
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
+                <label for="exampleInputPassword1">Sub Category</label>
                 <input type="text" class="form-control" name="subCategory" id="exampleInputPassword1" placeholder="Sub Category Name">
                 @error('subCategory')
                 <span class="text-danger">{{ $message }}</span>
@@ -41,8 +41,8 @@
             </div>
 
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="text" class="form-control" name="price" id="exampleInputPassword1" placeholder="Price">
+                <label for="exampleInputPassword1">Price</label>
+                <input type="number" class="form-control" name="price" id="exampleInputPassword1" placeholder="Price">
                 @error('price')
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
