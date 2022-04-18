@@ -226,6 +226,33 @@ class ProductsController extends Controller
     }
 
 
+    public function form()
+    {
+         $superCategories = SuperCategory::all();
+        return view('form' , ['superCategories' => $superCategories]);
+    }
+
+    public function formSubmit(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'supCategory' => 'required',
+            'subCategory' => 'required',
+            'price' => 'required',
+            'file' => 'required'
+        ],
+        [
+            'supCategory:required' => 'supCategory is required',
+            'subCategory:required' => 'subCategory is required',
+            'price:required' => 'price is required',
+            'file:required' => 'file is required'
+        ])->validate();
+
+        $name = $request->file('file')->getClientOriginalName();
+        $path = $request->file('file')->store('public/files');
+
+        return $path;
+
+    }
 
 
 
