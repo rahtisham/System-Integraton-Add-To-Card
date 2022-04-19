@@ -154,7 +154,7 @@
                                                         <a href="{{ url('products/detail', [ $subCategory['sub_name'] , $subCategory['sub_id']]) }}">
                                                             <span class="card__text">
                                                                 <div class="img-grid">
-                                                                    <img src="{{ asset($subCategory['images']) }}" alt="Catchy Carz">
+                                                                    <img src="/files/{{ $subCategory['images'] }}" alt="Catchy Carz">
                                                                     <div class="car_description">
                                                                         <h4><a href="{{ url('products/detail', [ $subCategory['sub_name'] , $subCategory['sub_id']]) }}">{{ $subCategory['sub_name'] }}</a></h4>
                                                                         <div class="price"><span class="font25">PKR = {{ $subCategory['price'] }}</span></div>
@@ -524,7 +524,7 @@
 							<div class="car-view-slider">
 					          <ul id="flexiselDemo">
 							 <li>
-								 <a href="#"><img src="{{ asset('salaat/sp-4el.jpg') }}" alt=""/>
+								 <a href="#"><img src="{{ asset('/files/sp-4el.jpg') }}" alt=""/>
 								  <div class="caption">
 										{{-- <h3><a href="upcoming.html">Ford Mustang GT 500</a></h3>
 										<span>Catchy Carz</span> --}}
@@ -534,7 +534,7 @@
 
 							 </li>
 							 <li>
-								 <a href="#"><img src="{{ asset('salaat/sp-4el.jpg') }}" alt=""/>
+								 <a href="#"><img src="{{ asset('/files/sp-4el.jpg') }}" alt=""/>
 								 <div class="caption">
 										{{-- <h3><a href="upcoming.html">Acura TLX</a></h3>
 										<span>Catchy Carz</span> --}}
@@ -543,7 +543,7 @@
 								 </a>
 							 </li>
 							 <li>
-								 <a href="#"><img src="{{ asset('salaat/sp-4el.jpg') }}" alt=""/>
+								 <a href="#"><img src="{{ asset('/files/sp-4el.jpg') }}" alt=""/>
 								  <div class="caption">
 										{{-- <h3><a href="upcoming.html"> McLaren MP4-12c</a></h3>
 										<span>Catchy Carz</span> --}}
@@ -552,7 +552,7 @@
 								 </a>
 							 </li>
 							 <li>
-								 <a href="#"><img src="{{ asset('salaat/sp-4el.jpg') }}" alt=""/>
+								 <a href="#"><img src="{{ asset('/files/sp-4el.jpg') }}" alt=""/>
 									<div class="caption">
 										{{-- <h3><a href="upcoming.html">BMW Z4</a></h3> --}}
 									{{-- <span>Catchy Carz</span>
@@ -586,7 +586,7 @@
 					  <h3 class="tittle top"></h3>
 					  <div class="used-one">
 					     <figure class="effect-zoe">
-							 <a href="used.html"><img src="{{ asset('salaat/spt-home.jpg') }}" alt="Used Car" class="imgss"></a>
+							 <a href="used.html"><img src="{{ asset('/files/spt-home.jpg') }}" alt="Used Car" class="imgss"></a>
 							<figcaption>
 								{{-- <h4>CATCHY <span>CARZ</span></h4> --}}
 								{{-- <p class="icon-links">
@@ -601,7 +601,7 @@
 					  <div class="clearfix"> </div>
 					   <div class="used-one second">
 					     <figure class="effect-zoe">
-							<a href="used.html"><img src="{{ asset('salaat/spt-30.jpg') }}" alt="Used Car" class="imgss"></a>
+							<a href="used.html"><img src="{{ asset('/files/spt-30.jpg') }}" alt="Used Car" class="imgss"></a>
 							<figcaption>
 								{{-- <h4>CATCHY <span>CARZ</span></h4>
 								<p class="icon-links">
@@ -633,7 +633,7 @@
                 <ul id="flexiselDemo1">
                     @foreach ($subCategoryBannerImages as $bannerImages)
                         <li>
-                            <a href="{{ url('products/detail', [ $bannerImages['sub_name'] , $bannerImages['sub_id']]) }}"><img src="{{ asset($bannerImages['images']) }}" alt=""/>
+                            <a href="{{ url('products/detail', [ $bannerImages['sub_name'] , $bannerImages['sub_id']]) }}"><img src="/files/{{ $bannerImages['images'] }}" alt=""/>
                             <div class="caption">
                                 <h3><a href="{{ url('products/detail', [ $bannerImages['sub_name'] , $bannerImages['sub_id']]) }}">{{ $bannerImages['sub_name'] }}</a></h3>
                                 <span>PKR = {{ $bannerImages['price'] }}</span>

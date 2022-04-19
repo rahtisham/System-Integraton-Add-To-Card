@@ -196,7 +196,7 @@
                      @foreach($products as $product)
 					 <div class="news-grid">
 					    <div class="news-img up">
-						  <a href="{{ url('products/detail', [ $product['sub_name'] , $product['sub_id']]) }}"> <img src="{{ asset($product->images) }}" alt=" " style="width: 70%;"></a>
+						  <a href="{{ url('products/detail', [ $product['sub_name'] , $product['sub_id']]) }}"> <img src="/files/{{ $product->images }}" alt=" " style="width: 70%;"></a>
 						  <span class="price1">NEW</span>
 						</div>
 					    <div class="news-text coming" style="padding-top: 30px;">
@@ -224,7 +224,7 @@
                         @foreach ($latestPost as $post)
                             <div class="related-post">
                                 <div class="related-post-left">
-                                    <a href="{{ url('products/detail', [ $post['sub_name'] , $post['sub_id']]) }}"><img src="{{ asset($post['images']) }}" alt=" " class="img-responsive"></a>
+                                    <a href="{{ url('products/detail', [ $post['sub_name'] , $post['sub_id']]) }}"><img src="/files/{{ $post['images'] }}" alt=" " class="img-responsive"></a>
                                 </div>
                                 <div class="related-post-right">
                                     <h4 class="p-1"><a href="single.html">{{ $post['sub_name'] }}</a></h4>

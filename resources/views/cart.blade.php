@@ -102,7 +102,7 @@
                                     <tr data-id="{{ $id }}">
                                         <td data-th="Product">
                                             <div class="row centerlizeCart">
-                                                <div class="col-sm-3 hidden-xs"><img src="{{ asset($details['image']) }}" width="50" height="50" class="img-responsive"/></div>
+                                                <div class="col-sm-3 hidden-xs"><img src="/files/{{ $details['image'] }}" width="50" height="50" class="img-responsive"/></div>
                                                 <div class="col-sm-9 align-middle">
                                                     <h4 class="nomargin">{{ $details['sub_name'] }}</h4>
                                                     <input type="hidden" name="productName[]" value="{{ $details['sub_name'] }}">

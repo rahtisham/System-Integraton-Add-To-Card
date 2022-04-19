@@ -196,7 +196,7 @@
 					<div class="carousel" style="height: 341px;">
 						<ul>
                             @foreach ($productDetails as $productDetail)
-							    <li class=""> <img src="{{ asset($productDetail->images) }}" alt="quibusdam et aut offi"> <div class="caption1	"><span>quibusdam et aut offi</span></div></li>
+							    <li class=""> <img src="/files/{{ $productDetail->images }}" alt="quibusdam et aut offi"> <div class="caption1	"><span>quibusdam et aut offi</span></div></li>
 
                             @endforeach
 
@@ -317,7 +317,7 @@
                     @foreach ($latestPost as $post)
                     <div class="related-post">
 						<div class="related-post-left">
-							<a href="{{ url('products/detail', [ $post['sub_name'] , $post['sub_id']]) }}"><img src="{{ asset($post['images']) }}" alt=" " class="img-responsive"></a>
+							<a href="{{ url('products/detail', [ $post['sub_name'] , $post['sub_id']]) }}"><img src="/files/{{ $post['images'] }}" alt=" " class="img-responsive"></a>
 						</div>
 						<div class="related-post-right">
 							<h4 class="p-1"><a href="single.html">{{ $post['sub_name'] }}</a></h4>
