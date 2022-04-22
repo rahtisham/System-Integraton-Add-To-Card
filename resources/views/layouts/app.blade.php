@@ -80,7 +80,6 @@
                                   <li><a href="{{ url('products/Salaat Panel/1') }}">Salaat Panel<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                     <ul id="cateogries">
                                         <li data-id="1"><a href="{{ url('products/detail/SPT-Home/1') }}"><span>SPT-Home</span></a></li>
-                                        <li><a href="#"><span>SPT-Home</span></a></li>
                                         <li><a href="#"><span>SPT-Mini</span></a></li>
                                         <li><a href="#"><span>SPT-Mini Plus</span></a></li>
                                         <li><a href="#"><span>SPT-30</span></a></li>

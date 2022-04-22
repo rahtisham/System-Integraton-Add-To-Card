@@ -72,7 +72,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                   <li><a href="{{ url('products/Salaat Panel/1') }}">Salaat Panel<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                     <ul id="cateogries">
                                         <li data-id="1"><a href="{{ url('products/detail/SPT-Home/1') }}"><span>SPT-Home</span></a></li>
-                                        <li><a href="#"><span>SPT-Home</span></a></li>
                                         <li><a href="#"><span>SPT-Mini</span></a></li>
                                         <li><a href="#"><span>SPT-Mini Plus</span></a></li>
                                         <li><a href="#"><span>SPT-30</span></a></li>
@@ -363,7 +362,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <a href="https://api.whatsapp.com/send?phone=3360837535" class="whatsappIcon" target="_blank">
     <i class="fa fa-whatsapp whatsappIcon-float"></i>
     </a>
-    
+
 <script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery.flexisel.js') }}"></script>
 <script src="{{ asset('js/bootstrap.js') }}"></script>

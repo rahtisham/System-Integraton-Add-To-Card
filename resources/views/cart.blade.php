@@ -106,7 +106,7 @@
                                                 <div class="col-sm-9 align-middle">
                                                     <h4 class="nomargin">{{ $details['sub_name'] }}</h4>
                                                     <input type="hidden" name="productName[]" value="{{ $details['sub_name'] }}">
-                                                    <input type="hidden" name="subid" value="{{ $id }}">
+                                                    <input type="hidden" name="subid[]" value="{{ $id }}">
                                                 </div>
                                             </div>
                                         </td>
@@ -129,7 +129,10 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th colspan="5" class="text-right"><h3 class="total">Total &nbsp;&nbsp;<strong>    ${{ $total }} <input type="hidden" name="totalAmount" value="{{ $total }}"> </strong></h3></th>
+                                <th colspan="5" class="text-right"><h3 class="total">Total &nbsp;&nbsp;<strong>    PKR = {{ $total }} <input type="hidden" name="totalAmount" value="{{ $total }}"> </strong></h3></th>
+                            </tr>
+                            <tr>
+                                <th colspan="5" class="text-right"><h3 class="total">Delivery Charges &nbsp;&nbsp;<strong>    PKR = 200 <input type="hidden" name="totalAmount" value="{{ $total }}"> </strong></h3></th>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">

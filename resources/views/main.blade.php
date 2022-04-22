@@ -524,7 +524,7 @@
 							<div class="car-view-slider">
 					          <ul id="flexiselDemo">
 							 <li>
-								 <a href="#"><img src="{{ asset('/files/sp-4el.jpg') }}" alt=""/>
+								 <a href="#"><img src="{{ asset('/files/1650410382.jpg') }}" alt=""/>
 								  <div class="caption">
 										{{-- <h3><a href="upcoming.html">Ford Mustang GT 500</a></h3>
 										<span>Catchy Carz</span> --}}
@@ -534,7 +534,7 @@
 
 							 </li>
 							 <li>
-								 <a href="#"><img src="{{ asset('/files/sp-4el.jpg') }}" alt=""/>
+								 <a href="#"><img src="{{ asset('/files/1650410382.jpg') }}" alt=""/>
 								 <div class="caption">
 										{{-- <h3><a href="upcoming.html">Acura TLX</a></h3>
 										<span>Catchy Carz</span> --}}
@@ -543,7 +543,7 @@
 								 </a>
 							 </li>
 							 <li>
-								 <a href="#"><img src="{{ asset('/files/sp-4el.jpg') }}" alt=""/>
+								 <a href="#"><img src="{{ asset('/files/1650410382.jpg') }}" alt=""/>
 								  <div class="caption">
 										{{-- <h3><a href="upcoming.html"> McLaren MP4-12c</a></h3>
 										<span>Catchy Carz</span> --}}
@@ -552,7 +552,7 @@
 								 </a>
 							 </li>
 							 <li>
-								 <a href="#"><img src="{{ asset('/files/sp-4el.jpg') }}" alt=""/>
+								 <a href="#"><img src="{{ asset('/files/1650410382.jpg') }}" alt=""/>
 									<div class="caption">
 										{{-- <h3><a href="upcoming.html">BMW Z4</a></h3> --}}
 									{{-- <span>Catchy Carz</span>
@@ -586,7 +586,7 @@
 					  <h3 class="tittle top"></h3>
 					  <div class="used-one">
 					     <figure class="effect-zoe">
-							 <a href="used.html"><img src="{{ asset('/files/spt-home.jpg') }}" alt="Used Car" class="imgss"></a>
+							 <a href="#"><img src="/files/1650410382.jpg" alt="Used Car" class="imgss"></a>
 							<figcaption>
 								{{-- <h4>CATCHY <span>CARZ</span></h4> --}}
 								{{-- <p class="icon-links">
@@ -601,7 +601,7 @@
 					  <div class="clearfix"> </div>
 					   <div class="used-one second">
 					     <figure class="effect-zoe">
-							<a href="used.html"><img src="{{ asset('/files/spt-30.jpg') }}" alt="Used Car" class="imgss"></a>
+							<a href="#"><img src="/files/1650410382.jpg" alt="Used Car" class="imgss"></a>
 							<figcaption>
 								{{-- <h4>CATCHY <span>CARZ</span></h4>
 								<p class="icon-links">

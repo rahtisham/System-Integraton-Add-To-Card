@@ -39,7 +39,8 @@
         <div class="col-sm 6"></div><!--end of col-sm-2-->
     </div><!--end of row-->
     <div class="row">
-    <div class="mapouter w-100"><div class="gmap_canvas"><iframe width="1200" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;}</style><style>.gmap_canvas {overflow:hidden;background:none!important;}</style></div></div>
+    <div class="mapouter w-100"><div class="gmap_canvas">
+        <iframe width="1200" height="500" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.270024258323!2d67.02656461483812!3d24.85462558405665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f60108a32b7%3A0xbb4df184e92ff55f!2sMadina%20city%20mall!5e0!3m2!1sen!2s!4v1650664502753!5m2!1sen!2s" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;}</style><style>.gmap_canvas {overflow:hidden;background:none!important;}</style></div></div>
 
     </div>
 </div><!--end of container-->

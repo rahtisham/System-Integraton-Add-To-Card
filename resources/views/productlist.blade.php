@@ -201,12 +201,12 @@
 						</div>
 					    <div class="news-text coming" style="padding-top: 30px;">
 						    <h3><a href="{{ url('products/detail', [ $product['sub_name'] , $product['sub_id']]) }}">{{ $product['sub_name'] }}</a></h3>
-							{{-- <h5>Launched On: 07-Jun-2016</h5> --}}
-							<p class="news">Price {{ $product->price }} PKR </p>
-							<h6>Not rated yet,<a href="#"> Product Detail</a></h6>
-							<a href="{{ url('products/detail', [ $product['sub_name'] , $product['sub_id']]) }}" class="read hvr-shutter-in-horizontal">Product Detail</a>
-							<a href="{{ route('add.to.cart', $product->sub_id) }}" class="read hvr-shutter-in-horizontal">Add To Cart</a>
-							<ul class="p-t">
+							  {{-- <h5>Launched On: 07-Jun-2016</h5> --}}
+							  <p class="news">Price {{ $product->price }} PKR </p>
+							  <h6>Not rated yet,<a href="#"> Product Detail</a></h6>
+							  <a href="{{ url('products/detail', [ $product['sub_name'] , $product['sub_id']]) }}" class="read hvr-shutter-in-horizontal">Product Detail</a>
+							  <a href="{{ route('add.to.cart', $product->sub_id) }}" class="read hvr-shutter-in-horizontal">Add To Cart</a>
+							  <ul class="p-t">
 							  {{-- <li><a href="single.html">Photos</a></li>
 							  <li><a href="single.html">All Versions</a></li> --}}
 							</ul>

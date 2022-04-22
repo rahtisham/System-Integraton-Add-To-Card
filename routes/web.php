@@ -28,7 +28,7 @@ use App\Http\Controllers\ProductsController;
     Route::get('contact-us', [ProductsController::class, 'Contact'])->name('contact-us');
     Route::post('contact-us-submit', [ProductsController::class, 'contactFormSubmit'])->name('contact-us-submit');
 
-    
+
     Route::get('form', [ProductsController::class, 'form'])->name('form');
     Route::post('form-submit', [ProductsController::class, 'formSubmit'])->name('form-submit');
 

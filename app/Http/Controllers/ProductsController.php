@@ -30,8 +30,16 @@ class ProductsController extends Controller
 
 
         $latestPost = subCategory::latest('sub_id')->limit(3)->get();
-        $productsList = subCategory::where('s_id' , $id)->get();
-        return view('productlist' , ['products' => $productsList , 'latestPost' => $latestPost]);
+         $existsRecord = subCategory::where('s_id' , $id)->exists();
+         if(!empty($existsRecord))
+         {
+            $productsList = subCategory::where('s_id' , $id)->get();
+            return view('productlist' , ['products' => $productsList , 'latestPost' => $latestPost]);
+         }
+         else
+         {
+             return $productsList = "Rocord Not Found <a href='http://127.0.0.1:8000/'>Click Here Go To Home</a>";
+         }
 
     }
 
@@ -58,9 +66,9 @@ class ProductsController extends Controller
         $cart = session()->get('cart', []);
 
         if(isset($cart[$sub_id])) {
-             $cart[$sub_id]['quantity']++;
+            $cart[$sub_id]['quantity']++;
         } else {
-            $cart[$sub_id] = [
+             $cart[$sub_id] = [
                 "sub_name" => $product[0]['sub_name'],
                 "quantity" => 1,
                 "price" => $product[0]['price'],
@@ -68,7 +76,7 @@ class ProductsController extends Controller
             ];
         }
 
-        session()->put('cart', $cart);
+         session()->put('cart', $cart);
         return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
 
@@ -101,7 +109,7 @@ class ProductsController extends Controller
     public function checkout(Request $request)
     {
 
-         
+
 
         $validator = Validator::make($request->all(), [
 
@@ -137,6 +145,7 @@ class ProductsController extends Controller
         $subtotal = $request->subtotal;
         $subtotals = array_sum($subtotal);
 
+        $totalWithDeliveryCharges = $subtotals + 200;
         $exp = $request->productName;
         $productName = json_encode($exp);
 
@@ -144,18 +153,17 @@ class ProductsController extends Controller
         $quanty = json_encode($quantity);
 
         $id = $request->get('subid');
-
         $orderId = strtotime("now");
 
         $customerOrders = [
 
-            'order_id' => '#'.str_pad($request->$id + $orderId, 8, "0", STR_PAD_LEFT),
+            'order_id' => '#'.$orderId,
             'Items_names' => $productName,
             'order_amount' => $request['price'],
             'quantity' => $quanty,
             'status' => "Pending",
-            'deliver_charges' => "100",
-            'total_amount' => $subtotals,
+            'deliver_charges' => "200",
+            'total_amount' => $totalWithDeliveryCharges,
             'name' => $request['name'],
             'contactNumber' => $request['contact'],
             'paymentType' => $request['payment'],
@@ -171,17 +179,20 @@ class ProductsController extends Controller
         ];
 
         $orders = CustomerOrders::store($customerOrders);
-        // return $orders->status;
+
         if($orders)
         {
-            if($id) {
-                $cart = session()->get('cart');
-                if(isset($cart[$id])) {
-                    unset($cart[$id]);
-                    session()->put('cart', $cart);
+            foreach ($id as $ids)
+            {
+                if($ids) {
+                    $cart = session()->get('cart');
+                    if(isset($cart[$ids])) {
+                        unset($cart[$ids]);
+                        session()->put('cart', $cart);
+                    }
                 }
-                return redirect('thank-you');
             }
+            return redirect('thank-you');
 
         }
 
@@ -237,13 +248,13 @@ class ProductsController extends Controller
 
         $validator = Validator::make($request->all(), [
             'supCategory' => 'required',
-            'subCategory' => 'required',
+            // 'subCategory' => 'required',
             'price' => 'required',
             'file' => 'required'
         ],
         [
             'supCategory:required' => 'supCategory is required',
-            'subCategory:required' => 'subCategory is required',
+            // 'subCategory:required' => 'subCategory is required',
             'price:required' => 'price is required',
             'file:required' => 'file is required'
         ])->validate();
