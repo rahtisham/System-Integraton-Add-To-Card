@@ -36,77 +36,9 @@
                 <label for="exampleInputPassword1">Sub Category</label>
                 <select class="form-control" name="subCategory">
                     <option value="">Select Sub Category</option>
-                    <option value="SPT-Mini">SPT-Mini</option>
-                    <option value="SPT-Mini Plus">SPT-Mini Plus</option>
-                    <option value="SPT-30">SPT-30</option>
-                    <option value="SPT-35">SPT-35</option>
-                    <option value="SPT-50">SPT-50</option>
-                    <option value="SPT-60F">SPT-60F</option>
-                    <option value="SP-4EL">SP-4EL</option>
-                    <option value="QP-15F">QP-15F</option>
-
-
-                    <option value="SPH-24 LED">SPH-24 LED</option>
-                    <option value="SPH-30 LED">SPH-30 LED</option>
-                    <option value="SPNH-30 LED">SPNH-30 LED</option>
-                    <option value="SPH-24 MX">SPH-24 MX</option>
-                    <option value="SPH-$0 MX">SPH-$0 MX</option>
-
-
-                    <option value="SP-50 LED">SP-50 LED</option>
-                    <option value="SP-80 LED">SP-80 LED</option>
-
-
-                    <option value="SPT-Home">SPT-Home</option>
-                    <option value="SPQ-Mini Plus">SPQ-Mini Plus</option>
-                    <option value="SPQ-30">SPQ-30</option>
-                    <option value="SPQ-35">SPQ-35</option>
-
-
-                    <option value="SCH-15">SCH-15</option>
-                    <option value="SPNH-30 LED">SPNH-30 LED</option>
-
-
-                    <option value="SC-106P">SC-106P</option>
-                    <option value="SC-106MMD">SC-106MMD</option>
-                    <option value="SC-106AT">SC-106AT</option>
-                    <option value="SC-206AT">SC-206AT</option>
-                    <option value="SC-206MMD">SC-206MMD</option>
-                    <option value="SC-306MMD">SC-306MMD</option>
-                    <option value="SC-4i">SC-4i</option>
-                    <option value="SC-106J Jumbo">SC-106J Jumbo</option>
-                    <option value="SC-8i">SC-8i</option>
-
-
-                    <option value="SC-106AT">SC-106AT</option>
-                    <option value="SC-206AT">SC-206AT</option>
-
-
-                    <option value="PC-180">PC-180</option>
-                    <option value="PC-2i">PC-2i</option>
-                    <option value="PC-2i">PC-2i</option>
-                    <option value="SW-2i">SW-2i</option>
-                    <option value="PC-3i">PC-3i</option>
-                    <option value="PC-4i">PC-4i</option>
-                    <option value="PC-5i">PC-5i</option>
-
-
-                    <option value="PC-MX2">PC-MX2</option>
-                    <option value="PC-MX4">PC-MX4</option>
-                    <option value="PC-MX12">PC-MX12</option>
-                    <option value="PC-MX12TH">PC-MX12TH</option>
-
-
-                    <option value="PC-MX2">PC-MX2</option>
-                    <option value="PC-MX4">PC-MX4</option>
-                    <option value="PC-MX12">PC-MX12</option>
-                    <option value="PC-MX12TH">PC-MX12TH</option>
-
-
-                    <option value="HC-5P">HC-5P</option>
-                    <option value="HC-4TM">HC-4TM</option>
-
-
+                    @foreach($subCategories as $subCategory)
+                        <option value="{{ $subCategory['s_id'] }}">{{ $subCategory['sub_name'] }}</option>
+                    @endforeach
                 </select>
                 @error('subCategory')
                 <span class="text-danger">{{ $message }}</span>

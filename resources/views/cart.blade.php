@@ -110,14 +110,14 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td data-th="Price"><h4 class="prices">${{ $details['price'] }}</h4>
+                                        <td data-th="Price"><h4 class="prices">{{ $details['price'] }}</h4>
                                         <input type="hidden" name="price" value="{{ $details['price'] }}">
                                         </td>
                                         <td data-th="Quantity">
                                             <input style="width: 100%" type="number" name="quantity[]"  value="{{ $details['quantity'] }}" class="form-control quantity update-cart" />
                                         </td>
                                         <td data-th="Subtotal" class="text-center">
-                                            <h4 class="prices">${{ $details['price'] * $details['quantity'] }}</h4>
+                                            <h4 class="prices">{{ $details['price'] * $details['quantity'] }}</h4>
                                             <input style="width: 100%" type="hidden" name="subtotal[]"  value="{{ $details['price'] * $details['quantity'] }}" class="form-control quantity update-cart" />
                                         </td>
                                         <td class="actions" data-th="">

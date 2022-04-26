@@ -20,7 +20,32 @@ class ProductsController extends Controller
 
         $subCategoryBannerImages = subCategory::latest('sub_id')->limit(7)->get();
         $subCategories = subCategory::latest('sub_id')->limit(3)->get();
-        return view('main'  , ['subCategories' => $subCategories , 'subCategoryBannerImages' => $subCategoryBannerImages]);
+        $salaatPanel = subCategory::where('s_id' , '1')->get();
+        $salaatPanelHorizental = subCategory::where('s_id' , '2')->get();
+        $salaatPanelVertical = subCategory::where('s_id' , '3')->get();
+        $SalaatPanelWithQuranAzan = subCategory::where('s_id' , '4')->get();
+        $JamaatNextChangePanel = subCategory::where('s_id' , '5')->get();
+        $SalaatClock = subCategory::where('s_id' , '6')->get();
+        $SalaatClockWithQuranAzan = subCategory::where('s_id' , '7')->get();
+        $PlainClock = subCategory::where('s_id' , '8')->get();
+        $PlainClockOutdoor = subCategory::where('s_id' , '9')->get();
+        $PlainClockMXOutdoor = subCategory::where('s_id' , '10')->get();
+        $SalaatClockWithQuranAzannn = subCategory::where('s_id' , '11')->get();
+        return view('main'  , [
+                                'subCategories' => $subCategories ,
+                                'subCategoryBannerImages' => $subCategoryBannerImages,
+                                'salaatPanel' => $salaatPanel,
+                                'salaatPanelHorizental' => $salaatPanelHorizental,
+                                'salaatPanelVertical' => $salaatPanelVertical,
+                                'SalaatPanelWithQuranAzan' => $SalaatPanelWithQuranAzan,
+                                'JamaatNextChangePanel' => $JamaatNextChangePanel,
+                                'SalaatClock' => $SalaatClock,
+                                'SalaatClockWithQuranAzan' => $SalaatClockWithQuranAzan,
+                                'PlainClock' => $PlainClock,
+                                'PlainClockOutdoor' => $PlainClockOutdoor,
+                                'PlainClockMXOutdoor' => $PlainClockMXOutdoor,
+                                'SalaatClockWithQuranAzannn' => $SalaatClockWithQuranAzannn,
+                            ]);
 
     }
 
@@ -239,8 +264,9 @@ class ProductsController extends Controller
 
     public function form()
     {
-         $superCategories = SuperCategory::all();
-        return view('form' , ['superCategories' => $superCategories]);
+        $superCategories = SuperCategory::all();
+        $subCategories = subCategory::all();
+        return view('form' , ['superCategories' => $superCategories , 'subCategories' => $subCategories]);
     }
 
     public function formSubmit(Request $request)

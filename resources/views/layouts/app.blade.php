@@ -72,128 +72,103 @@
                 <div class="demo-inner-content">
                    <div class="header-top">
                         <!-- /header-left -->
-		          <div class="header-left">
-                    <!-- /sidebar -->
+		                <div class="header-left">
+                            <!-- /sidebar -->
                           <div id="sidebar">
                                <h4 class="menu">Menu</h4>
                                     <ul>
                                   <li><a href="{{ url('products/Salaat Panel/1') }}">Salaat Panel<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                     <ul id="cateogries">
-                                        <li data-id="1"><a href="{{ url('products/detail/SPT-Home/1') }}"><span>SPT-Home</span></a></li>
-                                        <li><a href="#"><span>SPT-Mini</span></a></li>
-                                        <li><a href="#"><span>SPT-Mini Plus</span></a></li>
-                                        <li><a href="#"><span>SPT-30</span></a></li>
-                                        <li><a href="#"><span>SPT-35</span></a></li>
-                                        <li><a href="#"><span>SPT-50</span></a></li>
-                                        <li><a href="#"><span>SPT-60F</span></a></li>
-                                        <li><a href="#"><span>SP-4EL</span></a></li>
-                                       <li class="last"><a href="#"><span>QP-15F</span></a></li>
+                                        @foreach ($salaatPanel as $salaat)
+                                            <li><a href="products/detail/{{ $salaat['sub_name'] }}/{{ $salaat['sub_id'] }}"><span>{{ $salaat['sub_name'] }}</span></a></li>
+                                        @endforeach
                                      </ul>
                                  </li>
 
-                                 <li><a href="{{ url('products/Panel Horizontal/7') }}">Salaat Panel Horizontal <i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                 <li><a href="{{ url('products/Salaat Panel Horizontal/2') }}">Salaat Panel Horizontal <i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                     <ul>
-                                      <li><a href="#">SPH-24 LED</a></li>
-                                      <li><a href="#">SPH-30 LED</a></li>
-                                      <li><a href="#">SPNH-30 LED</a></li>
-                                      <li><a href="#">SPH-24 MX</a></li>
-                                      <li><a href="#">SPH-$0 MX</a></li>
-
+                                        @foreach ($salaatPanelHorizental as $salaatPanel)
+                                        <li><a href="products/detail/{{ $salaatPanel['sub_name'] }}/{{ $salaatPanel['sub_id'] }}"><span>{{ $salaat['sub_name'] }}</span></a></li>
+                                        @endforeach
                                    </ul>
                                  </li>
 
-
-
-                                 <li><a href="{{ url('products/Salaat Panel Vertical/6') }}">Salaat Panel Vertical<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                 <li><a href="{{ url('products/Salaat Panel Vertical/3') }}">Salaat Panel Vertical<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                     <ul>
-                                      <li><a href="#">SP-50 LED</a></li>
-                                      <li><a href="#">SP-80 LED</a></li>
-
+                                        @foreach ($salaatPanelVertical as $salaatPanelVerticals)
+                                        <li><a href="products/detail/{{ $salaatPanelVerticals['sub_name'] }}/{{ $salaatPanelVerticals['sub_id'] }}"><span>{{ $salaat['sub_name'] }}</span></a></li>
+                                        @endforeach
                                    </ul>
                                  </li>
 
-                                 <li><a href="{{ url('products/Salaat Panel With Quran & Azan/9') }}">Salaat Panel With Quran & Azan <i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                 <li><a href="{{ url('products/Salaat Panel With Quran & Azan/4') }}">Salaat Panel With Quran & Azan <i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                     <ul>
-                                      <li><a href="#">SPT-Home</a></li>
-                                      <li><a href="#">SPQ-Mini Plus</a></li>
-                                      <li><a href="#">SPQ-30</a></li>
-                                      <li><a href="#">SPQ-35</a></li>
-
+                                        @foreach ($SalaatPanelWithQuranAzan as $SalaatPanelWithQuranAzans)
+                                        <li><a href="products/detail/{{ $SalaatPanelWithQuranAzans['sub_name'] }}/{{ $SalaatPanelWithQuranAzans['sub_id'] }}"><span>{{ $salaat['sub_name'] }}</span></a></li>
+                                        @endforeach
                                    </ul>
                                  </li>
 
-                                 <li><a href="{{ url('products/Jamaat Next Change Panel/10') }}">Jamaat Next Change Panel<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                 <li><a href="{{ url('products/Jamaat Next Change Panel/5') }}">Jamaat Next Change Panel<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                     <ul>
-                                      <li><a href="#">SCH-15</a></li>
-                                      <li><a href="#">SPNH-30 LED</a></li>
-
+                                        @foreach ($JamaatNextChangePanel as $JamaatNextChangePanels)
+                                        <li><a href="products/detail/{{ $JamaatNextChangePanels['sub_name'] }}/{{ $JamaatNextChangePanels['sub_id'] }}"><span>{{ $salaat['sub_name'] }}</span></a></li>
+                                        @endforeach
                                    </ul>
                                  </li>
 
-                                 <li><a href="{{ url('products/Salaat Clock/2') }}">Salaat Clock<i class="glyphicon glyphicon-triangle-bottom"> </i></a>
+                                 <li><a href="{{ url('products/Salaat Clock/6') }}">Salaat Clock<i class="glyphicon glyphicon-triangle-bottom"> </i></a>
                                     <ul>
-                                    <li><a href="#">SC-106P</a></li>
-                                    <li><a href="#">SC-106MMD</a></li>
-                                    <li><a href="#">SC-106AT</a></li>
-                                    <li><a href="#">SC-206AT</a></li>
-                                    <li><a href="#">SC-206MMD</a></li>
-                                    <li><a href="#">SC-306MMD</a></li>
-                                    <li><a href="#">SC-4i</a></li>
-                                    <li><a href="#">SC-106J Jumbo</a></li>
-                                    <li><a href="#">SC-8i</a></li>
+                                        @foreach ($SalaatClock as $SalaatClocks)
+                                        <li><a href="products/detail/{{ $SalaatClocks['sub_name'] }}/{{ $SalaatClocks['sub_id'] }}"><span>{{ $salaat['sub_name'] }}</span></a></li>
+                                        @endforeach
                                     </ul>
                                  </li>
 
-                                 <li><a href="{{ url('products/Salaat Clock With Quran & Azan/11') }}">Salaat Clock With Quran & Azan<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                 <li><a href="{{ url('products/Salaat Clock With Quran & Azan/7') }}">Salaat Clock With Quran & Azan<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                     <ul>
-                                      <li><a href="#">SC-106AT</a></li>
-                                      <li><a href="#">SC-206AT</a></li>
+                                        @foreach ($SalaatClockWithQuranAzan as $SalaatClockWithQuranAzans)
+                                        <li><a href="products/detail/{{ $SalaatClockWithQuranAzans['sub_name'] }}/{{ $SalaatClockWithQuranAzans['sub_id'] }}"><span>{{ $salaat['sub_name'] }}</span></a></li>
+                                        @endforeach
                                    </ul>
                                  </li>
 
 
-                                  <li><a href="{{ url('products/Plain Clock/3') }}">Plain Clock<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                  <li><a href="{{ url('products/Plain Clock/8') }}">Plain Clock<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                     <ul>
-                                      <li><a href="#">PC-180</a></li>
-                                      <li><a href="#">PC-2i</a></li>
-                                      <li><a href="#">SW-2i</a></li>
-                                      <li><a href="#">PC-3i</a></li>
-                                      <li><a href="#">PC-4i</a></li>
-                                      <li><a href="#">PC-5i</a></li>
-
+                                        @foreach ($PlainClock as $PlainClocks)
+                                        <li><a href="products/detail/{{ $PlainClocks['sub_name'] }}/{{ $PlainClocks['sub_id'] }}"><span>{{ $salaat['sub_name'] }}</span></a></li>
+                                        @endforeach
                                    </ul>
                                  </li>
 
-                                 <li><a href="{{ url('products/Plain Clock Outdoor/12') }}">Plain Clock Outdoor<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                 <li><a href="{{ url('products/Plain Clock Outdoor/9') }}">Plain Clock Outdoor<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                     <ul>
-                                      <li><a href="#">PC-MX2</a></li>
-                                      <li><a href="#">PC-MX4</a></li>
-                                      <li><a href="#">PC-MX12</a></li>
-                                      <li><a href="#">PC-MX12TH</a></li>
-
+                                        @foreach ($PlainClockOutdoor as $PlainClockOutdoors)
+                                        <li><a href="products/detail/{{ $PlainClockOutdoors['sub_name'] }}/{{ $PlainClockOutdoors['sub_id'] }}"><span>{{ $salaat['sub_name'] }}</span></a></li>
+                                        @endforeach
                                    </ul>
                                  </li>
 
-                                 <li><a href="{{ url('products/Plain Clock MX Outdoor/4') }}">Plain Clock MX<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                                 <li><a href="{{ url('products/Plain Clock MX Outdoor/10') }}">Plain Clock MX<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                   <ul>
-                                    <li><a href="#">PC-MX2</a></li>
-                                    <li><a href="#">PC-MX4</a></li>
-                                    <li><a href="#">PC-MX12</a></li>
-                                    <li><a href="#">PC-MX12TH</a></li>
+                                    @foreach ($PlainClockMXOutdoor as $PlainClockMXOutdoors)
+                                    <li><a href="products/detail/{{ $PlainClockMXOutdoors['sub_name'] }}/{{ $PlainClockMXOutdoors['sub_id'] }}"><span>{{ $salaat['sub_name'] }}</span></a></li>
+                                    @endforeach
                                  </ul>
                                </li>
 
 
-                               <li><a href="{{ url('products/Hijri Calendar/5') }}">Hijri Calendar<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
+                               <li><a href="{{ url('products/Salaat Clock With Quran & Azannn/11') }}">Salaat Clock With Quran & Azannn<i class="glyphicon glyphicon-triangle-bottom"> </i> </a>
                                   <ul>
-                                    <li><a href="#">HC-5P</a></li>
-                                    <li><a href="#">HC-4TM</a></li>
-
+                                      @foreach ($SalaatClockWithQuranAzannn as $SalaatClockWithQuranAzannns)
+                                        <li><a href="products/detail/{{ $SalaatClockWithQuranAzannns['sub_name'] }}/{{ $SalaatClockWithQuranAzannns['sub_id'] }}"><span>{{ $salaat['sub_name'] }}</span></a></li>
+                                      @endforeach
                                  </ul>
                                </li>
 
 
-                               <li><a href="{{ url('products/Apartment Intercom/8') }}">Apartment Intercom<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
+                               <li><a href="{{ url('products/Apartment Intercom/12') }}">Apartment Intercom<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
                                <li><a href="{{ url('products/PABX/13') }}">PABX<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
                                <li><a href="{{ url('products/School Timer/14') }}">School Timer<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
                                <li><a href="{{ url('products/Gold Rate/15') }}">Gold Rate<i class="glyphicon glyphicon-triangle-bottom"> </i> </a></li>
@@ -209,8 +184,8 @@
                                  <span></span>
                              </div>
                          </div>
-                      </div>
-                    <!-- //header-left -->
+                        </div>
+                        <!-- //header-left -->
                              <div class="search-box">
                                 <div id="sb-search" class="sb-search">
                                     {{-- <form action="#" method="post">
