@@ -135,6 +135,9 @@
                                 <th colspan="5" class="text-right"><h3 class="total">Delivery Charges &nbsp;&nbsp;<strong>    PKR = 200 <input type="hidden" name="totalAmount" value="{{ $total }}"> </strong></h3></th>
                             </tr>
                             <tr>
+                                <th colspan="5" class="text-right"><h3 class="total">Total With Delviery Charges &nbsp;&nbsp;<strong>    PKR = {{ $total + 200 }} <input type="hidden" name="totalAmount" value="{{ $total }}"> </strong></h3></th>
+                            </tr>
+                            <tr>
                                 <td colspan="5" class="text-right">
                                     <a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a>
                                     <button type="submit" class="btn btn-success">Checkout</button>
